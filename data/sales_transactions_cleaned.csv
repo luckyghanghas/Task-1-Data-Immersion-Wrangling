@@ -1,0 +1,249 @@
+order_id,order_date,order_month,customer_id,customer_name,customer_dob,customer_age,customer_segment,region,sales_channel,product,quantity,unit_price,discount_rate,gross_revenue,net_revenue,payment_mode,order_status
+ORD-1058,2025-01-01,2025-01,CUST-007,Priya Nair,1996-09-15,29.0,Enterprise,West,Online,Headphones,1,4874.78,0.1,4874.78,4387.3,Credit Card,Returned
+ORD-1028,2025-01-03,2025-01,CUST-006,Neha Gupta,1987-07-10,38.0,Student,Central,Partner,Headphones,2,2117.44,0.15,4234.88,3599.65,Credit Card,Cancelled
+ORD-1196,2025-01-05,2025-01,CUST-055,Neha Gupta,1975-12-11,50.0,Enterprise,North,Online,Keyboard,1,2362.3,0.15,2362.3,2007.96,Cash,Completed
+ORD-1249,2025-01-06,2025-01,CUST-005,Vikram Singh,1983-07-13,42.0,Small Business,South,Partner,Mouse,1,693.85,0.0,693.85,693.85,Net Banking,Completed
+ORD-1171,2025-01-07,2025-01,CUST-072,Priya Nair,1984-07-13,41.0,Enterprise,South,Online,Monitor,1,17166.74,0.05,17166.74,16308.4,Debit Card,Returned
+ORD-1157,2025-01-08,2025-01,CUST-062,Priya Nair,1981-04-24,45.0,Enterprise,South,Partner,Smartphone,1,40692.64,0.05,40692.64,38658.01,Debit Card,Completed
+ORD-1032,2025-01-09,2025-01,CUST-081,Vikram Singh,1994-02-15,32.0,Enterprise,West,Retail,Smartphone,3,16862.68,0.0,50588.04,50588.04,Credit Card,Completed
+ORD-1108,2025-01-09,2025-01,CUST-019,Rohan Mehta,1995-09-19,30.0,Student,Central,Retail,Keyboard,1,3042.73,0.1,3042.73,2738.46,Credit Card,Completed
+ORD-1019,2025-01-11,2025-01,CUST-085,Vikram Singh,1976-03-10,50.0,Small Business,South,Partner,Mouse,3,1247.93,0.15,3743.79,3182.22,Debit Card,Completed
+ORD-1175,2025-01-14,2025-01,CUST-027,Sneha Rao,2005-12-15,20.0,Student,West,Partner,Smartphone,2,30005.76,0.2,60011.52,48009.22,Cash,Completed
+ORD-1045,2025-01-15,2025-01,CUST-028,Rohan Mehta,1990-06-06,36.0,Small Business,East,Partner,Smartphone,3,30805.04,0.2,92415.12,73932.1,Debit Card,Completed
+ORD-1124,2025-01-16,2025-01,CUST-083,Rohan Mehta,1990-11-18,35.0,Professional,West,Retail,Headphones,2,2335.55,0.1,4671.1,4203.99,Cash,Completed
+ORD-1151,2025-01-17,2025-01,CUST-003,Priya Nair,2000-11-14,25.0,Student,North,Partner,Headphones,1,1591.62,0.2,1591.62,1273.3,Upi,Completed
+ORD-1219,2025-01-18,2025-01,CUST-083,Rohan Mehta,1994-10-20,31.0,Enterprise,Central,Retail,Smartphone,4,21074.4,0.1,84297.6,75867.84,Upi,Returned
+ORD-1230,2025-01-18,2025-01,CUST-014,Aarav Sharma,1984-11-01,41.0,Professional,West,Online,Mouse,3,873.72,0.1,2621.16,2359.04,Upi,Completed
+ORD-1112,2025-01-19,2025-01,CUST-046,Aarav Sharma,1999-07-11,26.0,Small Business,North,Retail,Headphones,2,4954.32,0.15,9908.64,8422.34,Cash,Completed
+ORD-1096,2025-01-22,2025-01,CUST-042,Vikram Singh,1989-10-21,36.0,Professional,North,Retail,Monitor,2,13536.2,0.15,27072.4,23011.54,Upi,Completed
+ORD-1152,2025-01-23,2025-01,CUST-028,Aarav Sharma,1987-08-08,38.0,Small Business,South,Partner,Keyboard,2,2669.2,0.0,5338.4,5338.4,Net Banking,Completed
+ORD-1207,2025-01-23,2025-01,CUST-061,Rohan Mehta,2002-08-01,23.0,Professional,South,Online,Monitor,2,8960.67,0.2,17921.34,14337.07,Net Banking,Completed
+ORD-1049,2025-01-24,2025-01,CUST-017,Neha Gupta,1976-10-09,49.0,Student,North,Partner,Headphones,1,859.42,0.15,859.42,730.51,Debit Card,Completed
+ORD-1018,2025-01-26,2025-01,CUST-021,Aarav Sharma,1993-08-17,32.0,Professional,North,Partner,Laptop,2,73976.83,0.2,147953.66,118362.93,Upi,Completed
+ORD-1088,2025-01-27,2025-01,CUST-007,Neha Gupta,1979-03-25,47.0,Small Business,West,Partner,Smartphone,1,35812.67,0.0,35812.67,35812.67,Cash,Completed
+ORD-1156,2025-01-27,2025-01,CUST-078,Aarav Sharma,1983-07-22,42.0,Professional,Central,Partner,Keyboard,3,958.9,0.2,2876.7,2301.36,Net Banking,Completed
+ORD-1017,2025-02-01,2025-02,CUST-037,Sneha Rao,1987-05-26,39.0,Professional,South,Retail,Keyboard,1,3121.02,0.0,3121.02,3121.02,Credit Card,Completed
+ORD-1134,2025-02-01,2025-02,CUST-072,Rohan Mehta,1997-03-17,29.0,Enterprise,East,Online,Keyboard,2,1849.06,0.15,3698.12,3143.4,Cash,Returned
+ORD-1081,2025-02-07,2025-02,CUST-019,Aarav Sharma,2003-02-11,23.0,Small Business,Central,Partner,Keyboard,1,1002.29,0.2,1002.29,801.83,Net Banking,Returned
+ORD-1129,2025-02-07,2025-02,CUST-036,Vikram Singh,1987-09-15,38.0,Professional,North,Retail,Keyboard,1,2273.09,0.05,2273.09,2159.44,Debit Card,Completed
+ORD-1016,2025-02-08,2025-02,CUST-084,Vikram Singh,1989-09-04,36.0,Student,South,Online,Smartphone,1,21191.99,0.0,21191.99,21191.99,Cash,Returned
+ORD-1050,2025-02-09,2025-02,CUST-010,Vikram Singh,1978-02-13,48.0,Professional,South,Partner,Keyboard,1,1653.98,0.0,1653.98,1653.98,Debit Card,Completed
+ORD-1027,2025-02-10,2025-02,CUST-023,Vikram Singh,1985-04-01,41.0,Student,North,Partner,Headphones,1,2939.5,0.2,2939.5,2351.6,Cash,Cancelled
+ORD-1055,2025-02-11,2025-02,CUST-042,Vikram Singh,1994-01-14,32.0,Student,North,Online,Mouse,1,971.72,0.15,971.72,825.96,Net Banking,Completed
+ORD-1221,2025-02-11,2025-02,CUST-008,Sneha Rao,1982-01-26,44.0,Professional,South,Online,Monitor,2,13602.48,0.0,27204.96,27204.96,Credit Card,Completed
+ORD-1228,2025-02-15,2025-02,CUST-043,Sneha Rao,2001-12-22,24.0,Small Business,South,Online,Smartphone,1,22544.12,0.2,22544.12,18035.3,Upi,Returned
+ORD-1001,2025-02-22,2025-02,CUST-076,Sneha Rao,1996-12-18,29.0,Student,North,Online,Mouse,1,1957.26,0.0,1957.26,1957.26,Credit Card,Completed
+ORD-1214,2025-02-24,2025-02,CUST-053,Aarav Sharma,1980-08-15,45.0,Professional,West,Retail,Laptop,4,59763.91,0.15,239055.64,203197.29,Cash,Completed
+ORD-1177,2025-02-25,2025-02,CUST-046,Priya Nair,1999-04-22,27.0,Enterprise,East,Retail,Mouse,4,1527.5,0.2,6110.0,4888.0,Upi,Returned
+ORD-1089,2025-02-28,2025-02,CUST-087,Neha Gupta,1986-04-07,40.0,Small Business,North,Online,Keyboard,2,1859.71,0.0,3719.42,3719.42,Cash,Completed
+ORD-1060,2025-03-02,2025-03,CUST-038,Vikram Singh,1995-03-16,31.0,Enterprise,West,Retail,Keyboard,1,3478.32,0.0,3478.32,3478.32,Credit Card,Completed
+ORD-1003,2025-03-07,2025-03,CUST-006,Neha Gupta,2002-06-20,24.0,Student,West,Online,Smartphone,5,23107.62,0.0,115538.1,115538.1,Net Banking,Completed
+ORD-1024,2025-03-07,2025-03,CUST-046,Priya Nair,1976-05-12,50.0,Student,East,Partner,Monitor,1,13276.67,0.15,13276.67,11285.17,Cash,Completed
+ORD-1023,2025-03-08,2025-03,CUST-057,Vikram Singh,1995-06-05,31.0,Student,North,Online,Mouse,1,981.03,0.0,981.03,981.03,Credit Card,Completed
+ORD-1246,2025-03-09,2025-03,CUST-029,Rohan Mehta,1995-03-20,31.0,Small Business,West,Retail,Headphones,2,2955.78,0.2,5911.56,4729.25,Debit Card,Completed
+ORD-1044,2025-03-10,2025-03,CUST-076,Rohan Mehta,1999-08-15,26.0,Professional,North,Retail,Mouse,2,1765.96,0.15,3531.92,3002.13,Cash,Completed
+ORD-1190,2025-03-10,2025-03,CUST-038,Vikram Singh,1980-06-23,46.0,Student,South,Retail,Smartphone,3,30812.45,0.15,92437.35,78571.75,Upi,Completed
+ORD-1118,2025-03-11,2025-03,CUST-057,Aarav Sharma,2002-02-15,24.0,Small Business,North,Partner,Smartphone,5,21424.04,0.1,107120.2,96408.18,Net Banking,Completed
+ORD-1211,2025-03-12,2025-03,CUST-014,Priya Nair,1987-12-24,38.0,Enterprise,West,Online,Mouse,3,2242.12,0.05,6726.36,6390.04,Credit Card,Completed
+ORD-1179,2025-03-14,2025-03,CUST-027,Vikram Singh,1986-11-05,39.0,Small Business,West,Online,Laptop,1,87219.16,0.0,87219.16,87219.16,Cash,Completed
+ORD-1153,2025-03-15,2025-03,CUST-039,Rohan Mehta,1996-09-08,29.0,Professional,West,Partner,Headphones,2,4044.66,0.05,8089.32,7684.85,Cash,Completed
+ORD-1106,2025-03-16,2025-03,CUST-090,Priya Nair,1979-10-01,46.0,Enterprise,Central,Online,Smartphone,1,42717.25,0.2,42717.25,34173.8,Upi,Completed
+ORD-1198,2025-03-19,2025-03,CUST-057,Priya Nair,2004-07-20,21.0,Student,South,Online,Monitor,2,14481.69,0.2,28963.38,23170.7,Net Banking,Completed
+ORD-1235,2025-03-19,2025-03,CUST-011,Neha Gupta,1999-12-22,26.0,Enterprise,Central,Online,Headphones,1,1906.28,0.05,1906.28,1810.97,Net Banking,Completed
+ORD-1085,2025-03-21,2025-03,CUST-045,Vikram Singh,1996-08-08,29.0,Student,East,Partner,Headphones,2,2276.91,0.15,4553.82,3870.75,Credit Card,Completed
+ORD-1101,2025-03-21,2025-03,CUST-065,Vikram Singh,1977-05-28,49.0,Small Business,Central,Online,Headphones,4,2842.34,0.0,11369.36,11369.36,Net Banking,Cancelled
+ORD-1194,2025-03-22,2025-03,CUST-026,Neha Gupta,1989-08-01,36.0,Small Business,South,Retail,Laptop,1,82436.14,0.1,82436.14,74192.53,Upi,Completed
+ORD-1008,2025-03-23,2025-03,CUST-009,Sneha Rao,2000-11-14,25.0,Enterprise,Central,Retail,Monitor,1,19848.3,0.0,19848.3,19848.3,Net Banking,Completed
+ORD-1057,2025-03-24,2025-03,CUST-037,Neha Gupta,1985-07-23,40.0,Student,West,Online,Laptop,1,69292.18,0.05,69292.18,65827.57,Debit Card,Completed
+ORD-1038,2025-03-26,2025-03,CUST-069,Aarav Sharma,2001-05-08,25.0,Student,North,Partner,Keyboard,1,1641.16,0.2,1641.16,1312.93,Cash,Completed
+ORD-1054,2025-03-26,2025-03,CUST-073,Rohan Mehta,2000-05-20,26.0,Student,West,Partner,Mouse,1,957.83,0.0,957.83,957.83,Debit Card,Completed
+ORD-1102,2025-03-26,2025-03,CUST-047,Neha Gupta,1998-08-02,27.0,Enterprise,Central,Retail,Keyboard,1,1206.37,0.2,1206.37,965.1,Cash,Completed
+ORD-1195,2025-03-26,2025-03,CUST-090,Priya Nair,1976-07-21,49.0,Student,North,Online,Mouse,1,573.08,0.2,573.08,458.46,Credit Card,Returned
+ORD-1041,2025-03-27,2025-03,CUST-015,Priya Nair,1994-10-24,31.0,Student,Central,Online,Monitor,4,14905.58,0.05,59622.32,56641.2,Debit Card,Completed
+ORD-1201,2025-03-30,2025-03,CUST-003,Vikram Singh,1999-08-25,26.0,Student,East,Online,Keyboard,3,2291.47,0.05,6874.41,6530.69,Upi,Completed
+ORD-1030,2025-03-31,2025-03,CUST-071,Aarav Sharma,1994-10-10,31.0,Small Business,Unknown,Retail,Monitor,1,14147.59,0.1,14147.59,12732.83,Net Banking,Completed
+ORD-1025,2025-04-01,2025-04,CUST-043,Sneha Rao,2003-07-01,23.0,Small Business,South,Partner,Monitor,2,22737.98,0.0,45475.96,45475.96,Upi,Returned
+ORD-1184,2025-04-04,2025-04,CUST-050,Sneha Rao,1986-12-05,39.0,Enterprise,West,Online,Laptop,2,65961.5,0.0,131923.0,131923.0,Cash,Completed
+ORD-1141,2025-04-09,2025-04,CUST-059,Neha Gupta,2000-11-02,25.0,Professional,North,Partner,Monitor,1,22955.53,0.15,22955.53,19512.2,Debit Card,Completed
+ORD-1243,2025-04-09,2025-04,CUST-032,Aarav Sharma,2003-04-27,23.0,Student,East,Partner,Keyboard,1,3083.63,0.15,3083.63,2621.09,Credit Card,Completed
+ORD-1232,2025-04-10,2025-04,CUST-031,Aarav Sharma,1983-11-10,42.0,Enterprise,Central,Partner,Headphones,1,1597.93,0.2,1597.93,1278.34,Cash,Completed
+ORD-1210,2025-04-11,2025-04,CUST-020,Aarav Sharma,1998-09-25,27.0,Student,South,Partner,Smartphone,1,31525.8,0.1,31525.8,28373.22,Debit Card,Cancelled
+ORD-1010,2025-04-12,2025-04,CUST-070,Vikram Singh,1979-06-25,47.0,Small Business,West,Online,Laptop,4,65445.57,0.2,261782.28,209425.82,Upi,Completed
+ORD-1042,2025-04-12,2025-04,CUST-032,Aarav Sharma,1977-10-23,48.0,Student,Central,Online,Monitor,2,23288.94,0.1,46577.88,41920.09,Debit Card,Returned
+ORD-1125,2025-04-15,2025-04,CUST-041,Neha Gupta,1985-05-10,41.0,Enterprise,South,Retail,Laptop,2,60532.82,0.1,121065.64,108959.08,Net Banking,Completed
+ORD-1039,2025-04-19,2025-04,CUST-036,Sneha Rao,1989-11-06,36.0,Student,West,Online,Smartphone,3,17997.06,0.05,53991.18,51291.62,Net Banking,Completed
+ORD-1078,2025-04-21,2025-04,CUST-077,Aarav Sharma,2001-11-04,24.0,Professional,South,Partner,Smartphone,3,18771.78,0.15,56315.34,47868.04,Debit Card,Completed
+ORD-1188,2025-04-22,2025-04,CUST-032,Rohan Mehta,1988-02-24,38.0,Enterprise,East,Retail,Monitor,3,7707.38,0.2,23122.14,18497.71,Upi,Completed
+ORD-1033,2025-04-23,2025-04,CUST-007,Vikram Singh,1980-12-17,45.0,Student,West,Online,Smartphone,2,12182.98,0.0,24365.96,24365.96,Cash,Completed
+ORD-1222,2025-04-23,2025-04,CUST-023,Priya Nair,1993-12-07,32.0,Small Business,Central,Online,Mouse,1,1520.75,0.2,1520.75,1216.6,Debit Card,Completed
+ORD-1093,2025-04-24,2025-04,CUST-082,Aarav Sharma,1985-03-03,41.0,Small Business,East,Partner,Keyboard,2,1808.15,0.05,3616.3,3435.48,Credit Card,Completed
+ORD-1150,2025-04-25,2025-04,CUST-039,Sneha Rao,2001-01-25,25.0,Enterprise,South,Online,Laptop,1,73804.05,0.15,73804.05,62733.44,Cash,Completed
+ORD-1074,2025-04-30,2025-04,CUST-042,Vikram Singh,1990-01-20,36.0,Student,West,Partner,Monitor,1,15224.66,0.05,15224.66,14463.43,Debit Card,Completed
+ORD-1138,2025-04-30,2025-04,CUST-061,Aarav Sharma,1976-02-14,50.0,Student,Central,Online,Smartphone,1,34104.52,0.15,34104.52,28988.84,Cash,Completed
+ORD-1079,2025-05-02,2025-05,CUST-034,Aarav Sharma,1993-06-01,33.0,Enterprise,Central,Online,Smartphone,1,40592.78,0.0,40592.78,40592.78,Upi,Completed
+ORD-1200,2025-05-03,2025-05,CUST-064,Neha Gupta,1990-07-04,35.0,Student,East,Retail,Monitor,2,19713.34,0.05,39426.68,37455.35,Credit Card,Completed
+ORD-1244,2025-05-03,2025-05,CUST-063,Vikram Singh,1996-08-01,29.0,Professional,West,Partner,Headphones,1,2749.72,0.1,2749.72,2474.75,Net Banking,Completed
+ORD-1011,2025-05-04,2025-05,CUST-063,Aarav Sharma,2003-10-03,22.0,Professional,West,Partner,Headphones,4,4293.0,0.05,17172.0,16313.4,Credit Card,Completed
+ORD-1097,2025-05-07,2025-05,CUST-067,Vikram Singh,1997-08-15,28.0,Small Business,East,Retail,Headphones,5,1154.18,0.2,5770.9,4616.72,Cash,Completed
+ORD-1199,2025-05-07,2025-05,CUST-071,Vikram Singh,1983-03-11,43.0,Student,East,Online,Mouse,1,2422.82,0.05,2422.82,2301.68,Net Banking,Completed
+ORD-1117,2025-05-08,2025-05,CUST-024,Sneha Rao,2005-01-02,21.0,Student,East,Retail,Monitor,1,13238.15,0.05,13238.15,12576.24,Cash,Completed
+ORD-1176,2025-05-08,2025-05,CUST-077,Sneha Rao,2000-03-07,26.0,Enterprise,Central,Online,Smartphone,2,19986.7,0.2,39973.4,31978.72,Debit Card,Completed
+ORD-1090,2025-05-11,2025-05,CUST-064,Neha Gupta,1984-04-06,42.0,Professional,South,Retail,Monitor,1,10475.19,0.0,10475.19,10475.19,Net Banking,Completed
+ORD-1205,2025-05-13,2025-05,CUST-035,Neha Gupta,1980-06-05,46.0,Student,East,Retail,Mouse,1,1442.47,0.05,1442.47,1370.35,Debit Card,Completed
+ORD-1213,2025-05-14,2025-05,CUST-090,Neha Gupta,2002-06-26,24.0,Small Business,West,Retail,Monitor,1,18261.55,0.0,18261.55,18261.55,Credit Card,Completed
+ORD-1007,2025-05-16,2025-05,CUST-069,Rohan Mehta,1979-04-24,47.0,Enterprise,East,Online,Smartphone,2,25055.85,0.2,50111.7,40089.36,Credit Card,Completed
+ORD-1052,2025-05-16,2025-05,CUST-023,Vikram Singh,1996-02-06,30.0,Professional,North,Retail,Monitor,5,8686.97,0.0,43434.85,43434.85,Cash,Completed
+ORD-1234,2025-05-16,2025-05,CUST-024,Rohan Mehta,1977-11-18,48.0,Small Business,South,Retail,Laptop,1,68911.36,0.1,68911.36,62020.22,Upi,Returned
+ORD-1005,2025-05-17,2025-05,CUST-078,Neha Gupta,1997-11-21,28.0,Professional,South,Retail,Mouse,3,741.57,0.05,2224.71,2113.47,Cash,Completed
+ORD-1170,2025-05-19,2025-05,CUST-056,Sneha Rao,1978-03-03,48.0,Student,North,Online,Headphones,1,1184.39,0.05,1184.39,1125.17,Debit Card,Completed
+ORD-1035,2025-05-21,2025-05,CUST-031,Rohan Mehta,1989-02-23,37.0,Small Business,Central,Online,Mouse,1,2033.12,0.1,2033.12,1829.81,Credit Card,Completed
+ORD-1136,2025-05-21,2025-05,CUST-070,Sneha Rao,1984-02-19,42.0,Small Business,South,Retail,Mouse,2,1065.79,0.05,2131.58,2025.0,Upi,Completed
+ORD-1248,2025-05-22,2025-05,CUST-039,Priya Nair,1983-11-23,42.0,Professional,North,Partner,Keyboard,1,3467.41,0.2,3467.41,2773.93,Cash,Completed
+ORD-1192,2025-05-23,2025-05,CUST-042,Vikram Singh,1997-06-15,29.0,Student,West,Partner,Laptop,2,85804.38,0.0,171608.76,171608.76,Debit Card,Completed
+ORD-1053,2025-05-25,2025-05,CUST-030,Rohan Mehta,1997-08-03,28.0,Enterprise,North,Partner,Mouse,2,1011.64,0.0,2023.28,2023.28,Credit Card,Completed
+ORD-1128,2025-05-27,2025-05,CUST-056,Priya Nair,1992-01-28,34.0,Small Business,West,Retail,Laptop,1,72321.3,0.2,72321.3,57857.04,Upi,Completed
+ORD-1139,2025-05-28,2025-05,CUST-012,Neha Gupta,1985-05-21,41.0,Student,South,Retail,Mouse,4,2244.64,0.1,8978.56,8080.7,Credit Card,Completed
+ORD-1140,2025-05-29,2025-05,CUST-073,Vikram Singh,2003-01-01,23.0,Small Business,East,Retail,Laptop,5,68894.81,0.1,344474.05,310026.64,Net Banking,Completed
+ORD-1114,2025-06-01,2025-06,CUST-055,Priya Nair,1984-08-20,41.0,Small Business,West,Online,Smartphone,2,22599.98,0.0,45199.96,45199.96,Debit Card,Completed
+ORD-1091,2025-06-02,2025-06,CUST-003,Sneha Rao,1987-12-02,38.0,Small Business,Central,Retail,Mouse,1,1573.32,0.2,1573.32,1258.66,Net Banking,Completed
+ORD-1197,2025-06-03,2025-06,CUST-083,Neha Gupta,1979-07-25,46.0,Student,Central,Partner,Laptop,2,58584.95,0.05,117169.9,111311.4,Upi,Completed
+ORD-1250,2025-06-03,2025-06,CUST-072,Priya Nair,2002-03-27,24.0,Student,West,Online,Mouse,3,2303.71,0.2,6911.13,5528.9,Debit Card,Completed
+ORD-1113,2025-06-04,2025-06,CUST-067,Rohan Mehta,1990-12-16,35.0,Enterprise,North,Retail,Keyboard,2,3204.98,0.1,6409.96,5768.96,Net Banking,Completed
+ORD-1099,2025-06-08,2025-06,CUST-051,Priya Nair,2005-11-23,20.0,Small Business,Central,Retail,Smartphone,1,31230.4,0.0,31230.4,31230.4,Debit Card,Returned
+ORD-1029,2025-06-12,2025-06,CUST-065,Rohan Mehta,2002-02-24,24.0,Small Business,West,Partner,Headphones,1,4785.27,0.05,4785.27,4546.01,Debit Card,Completed
+ORD-1208,2025-06-13,2025-06,CUST-016,Vikram Singh,1983-02-19,43.0,Professional,South,Partner,Mouse,2,1280.68,0.05,2561.36,2433.29,Upi,Completed
+ORD-1006,2025-06-16,2025-06,CUST-041,Sneha Rao,2001-08-01,24.0,Student,South,Partner,Headphones,5,3488.0,0.15,17440.0,14824.0,Debit Card,Completed
+ORD-1092,2025-06-16,2025-06,CUST-047,Aarav Sharma,1980-10-15,45.0,Student,South,Online,Keyboard,2,1869.54,0.0,3739.08,3739.08,Net Banking,Completed
+ORD-1225,2025-06-22,2025-06,CUST-056,Neha Gupta,1984-05-06,42.0,Small Business,South,Partner,Laptop,1,68924.595,0.1,68924.6,62032.14,Net Banking,Completed
+ORD-1105,2025-06-28,2025-06,CUST-051,Vikram Singh,2004-01-14,22.0,Professional,West,Online,Smartphone,3,15026.55,0.0,45079.65,45079.65,Debit Card,Completed
+ORD-1095,2025-06-30,2025-06,CUST-058,Aarav Sharma,1991-02-10,35.0,Small Business,East,Online,Laptop,1,77098.48,0.05,77098.48,73243.56,Upi,Completed
+ORD-1043,2025-07-01,2025-07,CUST-014,Sneha Rao,2002-07-27,23.0,Enterprise,South,Retail,Monitor,1,13299.7,0.15,13299.7,11304.74,Credit Card,Completed
+ORD-1109,2025-07-04,2025-07,CUST-065,Vikram Singh,1977-09-18,48.0,Enterprise,West,Online,Monitor,1,18294.31,0.0,18294.31,18294.31,Cash,Completed
+ORD-1158,2025-07-04,2025-07,CUST-061,Rohan Mehta,1991-08-15,34.0,Small Business,East,Retail,Headphones,1,3041.33,0.05,3041.33,2889.26,Upi,Completed
+ORD-1126,2025-07-05,2025-07,CUST-050,Vikram Singh,1979-02-02,47.0,Professional,South,Retail,Monitor,1,11109.54,0.0,11109.54,11109.54,Net Banking,Completed
+ORD-1072,2025-07-07,2025-07,CUST-033,Sneha Rao,1991-09-09,34.0,Small Business,North,Retail,Headphones,2,1537.69,0.0,3075.38,3075.38,Upi,Completed
+ORD-1083,2025-07-08,2025-07,CUST-020,Neha Gupta,1985-09-11,40.0,Student,North,Online,Headphones,3,2474.67,0.2,7424.01,5939.21,Upi,Completed
+ORD-1021,2025-07-09,2025-07,CUST-039,Vikram Singh,1984-03-15,42.0,Small Business,North,Online,Headphones,1,2265.84,0.0,2265.84,2265.84,Debit Card,Returned
+ORD-1070,2025-07-11,2025-07,CUST-030,Vikram Singh,1998-08-27,27.0,Professional,South,Partner,Headphones,1,4433.28,0.2,4433.28,3546.62,Debit Card,Cancelled
+ORD-1116,2025-07-16,2025-07,CUST-020,Neha Gupta,2005-02-10,21.0,Small Business,East,Retail,Laptop,1,63259.84,0.2,63259.84,50607.87,Upi,Completed
+ORD-1183,2025-07-18,2025-07,CUST-045,Rohan Mehta,1994-07-19,31.0,Professional,East,Partner,Headphones,2,2855.83,0.2,5711.66,4569.33,Net Banking,Completed
+ORD-1037,2025-07-19,2025-07,CUST-070,Vikram Singh,2002-07-18,23.0,Enterprise,South,Retail,Monitor,1,7100.23,0.05,7100.23,6745.22,Cash,Completed
+ORD-1203,2025-07-20,2025-07,CUST-088,Neha Gupta,1993-11-25,32.0,Small Business,West,Partner,Monitor,4,23563.33,0.0,94253.32,94253.32,Credit Card,Completed
+ORD-1131,2025-07-21,2025-07,CUST-076,Rohan Mehta,1994-12-27,31.0,Small Business,West,Online,Monitor,4,9376.28,0.15,37505.12,31879.35,Debit Card,Completed
+ORD-1073,2025-07-23,2025-07,CUST-051,Aarav Sharma,2005-12-09,20.0,Student,West,Retail,Smartphone,3,19445.28,0.2,58335.84,46668.67,Debit Card,Completed
+ORD-1077,2025-07-23,2025-07,CUST-012,Neha Gupta,1983-04-04,43.0,Student,North,Retail,Laptop,5,67856.72,0.2,339283.6,271426.88,Credit Card,Completed
+ORD-1168,2025-07-23,2025-07,CUST-035,Sneha Rao,1999-01-06,27.0,Professional,East,Partner,Smartphone,3,23239.56,0.15,69718.68,59260.88,Cash,Cancelled
+ORD-1087,2025-07-25,2025-07,CUST-004,Aarav Sharma,1977-03-24,49.0,Enterprise,West,Retail,Headphones,1,1561.9,0.0,1561.9,1561.9,Debit Card,Completed
+ORD-1217,2025-07-25,2025-07,CUST-011,Vikram Singh,1986-11-21,39.0,Student,North,Online,Laptop,1,82333.6,0.0,82333.6,82333.6,Credit Card,Completed
+ORD-1164,2025-07-27,2025-07,CUST-029,Rohan Mehta,1989-10-08,36.0,Student,North,Retail,Headphones,3,1922.76,0.1,5768.28,5191.45,Cash,Completed
+ORD-1181,2025-07-27,2025-07,CUST-085,Sneha Rao,1995-06-03,31.0,Student,Central,Online,Smartphone,1,26070.19,0.1,26070.19,23463.17,Cash,Completed
+ORD-1216,2025-07-27,2025-07,CUST-071,Priya Nair,2002-08-18,23.0,Enterprise,North,Online,Laptop,2,64105.84,0.0,128211.68,128211.68,Upi,Completed
+ORD-1046,2025-07-28,2025-07,CUST-089,Sneha Rao,1990-09-25,35.0,Enterprise,North,Online,Monitor,1,23117.06,0.0,23117.06,23117.06,Debit Card,Completed
+ORD-1242,2025-07-28,2025-07,CUST-048,Aarav Sharma,1998-08-25,27.0,Student,East,Partner,Monitor,2,10194.91,0.0,20389.82,20389.82,Net Banking,Returned
+ORD-1186,2025-07-29,2025-07,CUST-057,Sneha Rao,1996-08-14,29.0,Student,Central,Online,Smartphone,3,43806.36,0.15,131419.08,111706.22,Credit Card,Completed
+ORD-1224,2025-08-03,2025-08,CUST-008,Aarav Sharma,1985-12-06,40.0,Professional,North,Partner,Monitor,1,12639.48,0.15,12639.48,10743.56,Debit Card,Completed
+ORD-1172,2025-08-04,2025-08,CUST-047,Rohan Mehta,1984-08-26,41.0,Enterprise,Central,Partner,Headphones,1,1412.93,0.0,1412.93,1412.93,Credit Card,Completed
+ORD-1185,2025-08-09,2025-08,CUST-058,Vikram Singh,1984-03-06,42.0,Small Business,North,Retail,Mouse,2,2330.24,0.0,4660.48,4660.48,Credit Card,Completed
+ORD-1107,2025-08-11,2025-08,CUST-031,Rohan Mehta,1991-07-04,34.0,Student,South,Retail,Laptop,1,84223.71,0.15,84223.71,71590.15,Net Banking,Returned
+ORD-1229,2025-08-13,2025-08,CUST-064,Sneha Rao,1998-06-07,28.0,Enterprise,North,Retail,Headphones,1,1253.75,0.0,1253.75,1253.75,Net Banking,Completed
+ORD-1034,2025-08-15,2025-08,CUST-071,Sneha Rao,1994-12-17,31.0,Enterprise,West,Retail,Mouse,2,1573.74,0.05,3147.48,2990.11,Credit Card,Cancelled
+ORD-1143,2025-08-17,2025-08,CUST-075,Neha Gupta,1999-05-11,27.0,Small Business,East,Partner,Keyboard,1,1394.53,0.05,1394.53,1324.8,Credit Card,Completed
+ORD-1147,2025-08-17,2025-08,CUST-066,Sneha Rao,2000-01-15,26.0,Student,Central,Retail,Mouse,1,1624.61,0.0,1624.61,1624.61,Debit Card,Returned
+ORD-1237,2025-08-18,2025-08,CUST-017,Aarav Sharma,1980-07-03,45.0,Student,West,Online,Monitor,3,18518.09,0.15,55554.27,47221.13,Credit Card,Completed
+ORD-1082,2025-08-21,2025-08,CUST-090,Aarav Sharma,1991-10-14,34.0,Enterprise,West,Online,Monitor,2,13475.37,0.15,26950.74,22908.13,Cash,Completed
+ORD-1064,2025-08-22,2025-08,CUST-084,Priya Nair,1975-12-05,50.0,Enterprise,East,Retail,Headphones,3,4471.6,0.1,13414.8,12073.32,Net Banking,Completed
+ORD-1187,2025-08-23,2025-08,CUST-071,Vikram Singh,1993-12-25,32.0,Student,East,Partner,Headphones,1,1744.34,0.05,1744.34,1657.12,Debit Card,Completed
+ORD-1026,2025-08-24,2025-08,CUST-029,Aarav Sharma,1986-05-27,40.0,Enterprise,East,Retail,Keyboard,4,3104.06,0.0,12416.24,12416.24,Upi,Completed
+ORD-1218,2025-08-25,2025-08,CUST-051,Sneha Rao,1976-03-19,50.0,Enterprise,West,Online,Mouse,1,670.46,0.05,670.46,636.94,Debit Card,Completed
+ORD-1068,2025-08-27,2025-08,CUST-021,Aarav Sharma,2003-05-22,23.0,Small Business,Central,Retail,Smartphone,1,20381.25,0.05,20381.25,19362.19,Cash,Completed
+ORD-1127,2025-08-28,2025-08,CUST-012,Sneha Rao,1990-05-16,36.0,Professional,South,Partner,Mouse,1,2002.55,0.1,2002.55,1802.3,Debit Card,Cancelled
+ORD-1047,2025-08-31,2025-08,CUST-071,Rohan Mehta,1992-12-09,33.0,Enterprise,East,Retail,Smartphone,1,20029.07,0.2,20029.07,16023.26,Debit Card,Completed
+ORD-1137,2025-09-03,2025-09,CUST-035,Vikram Singh,1981-04-27,45.0,Professional,North,Partner,Headphones,5,1131.92,0.1,5659.6,5093.64,Net Banking,Completed
+ORD-1062,2025-09-05,2025-09,CUST-049,Sneha Rao,1986-06-18,40.0,Professional,Unknown,Partner,Monitor,2,18218.99,0.0,36437.98,36437.98,Cash,Completed
+ORD-1069,2025-09-05,2025-09,CUST-046,Vikram Singh,1978-04-13,48.0,Small Business,North,Partner,Headphones,1,2175.14,0.0,2175.14,2175.14,Cash,Cancelled
+ORD-1059,2025-09-06,2025-09,CUST-031,Neha Gupta,1978-01-21,48.0,Small Business,Central,Online,Headphones,2,4696.23,0.1,9392.46,8453.21,Net Banking,Returned
+ORD-1209,2025-09-06,2025-09,CUST-002,Rohan Mehta,1985-02-18,41.0,Small Business,Central,Retail,Keyboard,1,2002.26,0.05,2002.26,1902.15,Net Banking,Completed
+ORD-1076,2025-09-08,2025-09,CUST-089,Rohan Mehta,1994-07-09,31.0,Enterprise,West,Online,Mouse,2,2259.37,0.2,4518.74,3614.99,Debit Card,Completed
+ORD-1160,2025-09-08,2025-09,CUST-063,Sneha Rao,2005-12-21,20.0,Small Business,South,Online,Keyboard,2,3341.7,0.05,6683.4,6349.23,Net Banking,Completed
+ORD-1241,2025-09-09,2025-09,CUST-030,Priya Nair,2002-12-22,23.0,Enterprise,East,Retail,Headphones,4,884.98,0.05,3539.92,3362.92,Cash,Completed
+ORD-1075,2025-09-10,2025-09,CUST-018,Sneha Rao,1978-08-02,47.0,Small Business,Central,Retail,Mouse,1,693.53,0.0,693.53,693.53,Net Banking,Completed
+ORD-1206,2025-09-12,2025-09,CUST-064,Vikram Singh,1989-09-12,36.0,Small Business,South,Retail,Monitor,1,19109.5,0.15,19109.5,16243.08,Upi,Completed
+ORD-1202,2025-09-14,2025-09,CUST-052,Aarav Sharma,1999-07-14,26.0,Small Business,North,Retail,Laptop,4,68929.13,0.05,275716.52,261930.69,Upi,Completed
+ORD-1080,2025-09-15,2025-09,CUST-085,Vikram Singh,1982-02-10,44.0,Enterprise,North,Online,Keyboard,1,1713.71,0.15,1713.71,1456.65,Cash,Completed
+ORD-1144,2025-09-15,2025-09,CUST-089,Aarav Sharma,2004-12-25,21.0,Small Business,Central,Online,Laptop,2,71288.82,0.0,142577.64,142577.64,Credit Card,Completed
+ORD-1130,2025-09-18,2025-09,CUST-005,Priya Nair,1987-02-09,39.0,Enterprise,Central,Retail,Headphones,2,2335.55,0.0,4671.1,4671.1,Credit Card,Completed
+ORD-1031,2025-09-19,2025-09,CUST-011,Rohan Mehta,1990-06-12,36.0,Student,South,Partner,Monitor,2,14904.8,0.1,29809.6,26828.64,Debit Card,Completed
+ORD-1121,2025-09-22,2025-09,CUST-082,Vikram Singh,1986-03-27,40.0,Professional,West,Partner,Smartphone,5,33197.17,0.1,165985.85,149387.27,Upi,Completed
+ORD-1212,2025-09-24,2025-09,CUST-011,Vikram Singh,1988-12-12,37.0,Professional,West,Online,Mouse,1,492.19,0.0,492.19,492.19,Net Banking,Returned
+ORD-1154,2025-09-26,2025-09,CUST-020,Rohan Mehta,1985-12-14,40.0,Professional,Central,Retail,Laptop,5,68924.595,0.2,344622.98,275698.38,Credit Card,Completed
+ORD-1161,2025-09-26,2025-09,CUST-007,Aarav Sharma,1976-02-27,50.0,Professional,South,Online,Keyboard,1,3190.22,0.2,3190.22,2552.18,Credit Card,Cancelled
+ORD-1100,2025-09-27,2025-09,CUST-066,Rohan Mehta,1977-11-22,48.0,Small Business,East,Online,Smartphone,2,39355.65,0.2,78711.3,62969.04,Credit Card,Cancelled
+ORD-1220,2025-09-27,2025-09,CUST-003,Sneha Rao,1982-11-26,43.0,Enterprise,Central,Retail,Laptop,1,59803.26,0.0,59803.26,59803.26,Debit Card,Completed
+ORD-1065,2025-10-01,2025-10,CUST-063,Vikram Singh,1987-06-21,39.0,Student,South,Partner,Mouse,1,568.66,0.05,568.66,540.23,Debit Card,Returned
+ORD-1103,2025-10-04,2025-10,CUST-060,Rohan Mehta,1986-11-19,39.0,Enterprise,South,Online,Smartphone,2,22212.44,0.1,44424.88,39982.39,Net Banking,Returned
+ORD-1167,2025-10-04,2025-10,CUST-018,Neha Gupta,1985-07-25,40.0,Small Business,North,Online,Smartphone,2,30700.97,0.1,61401.94,55261.75,Cash,Completed
+ORD-1166,2025-10-06,2025-10,CUST-041,Aarav Sharma,1993-11-02,32.0,Professional,West,Online,Keyboard,1,3287.65,0.2,3287.65,2630.12,Debit Card,Returned
+ORD-1002,2025-10-07,2025-10,CUST-036,Aarav Sharma,1988-04-15,38.0,Enterprise,East,Retail,Monitor,2,16541.17,0.2,33082.34,26465.87,Credit Card,Completed
+ORD-1146,2025-10-08,2025-10,CUST-069,Priya Nair,2003-09-07,22.0,Small Business,Central,Retail,Mouse,1,2326.21,0.0,2326.21,2326.21,Upi,Completed
+ORD-1223,2025-10-09,2025-10,CUST-005,Aarav Sharma,1992-05-06,34.0,Professional,Central,Online,Monitor,2,16572.85,0.0,33145.7,33145.7,Upi,Completed
+ORD-1120,2025-10-10,2025-10,CUST-040,Sneha Rao,1979-03-10,47.0,Enterprise,West,Partner,Laptop,1,75029.71,0.1,75029.71,67526.74,Upi,Completed
+ORD-1104,2025-10-11,2025-10,CUST-016,Rohan Mehta,2004-02-23,22.0,Professional,East,Retail,Smartphone,4,13721.93,0.1,54887.72,49398.95,Net Banking,Returned
+ORD-1155,2025-10-15,2025-10,CUST-018,Sneha Rao,1988-07-18,37.0,Small Business,South,Retail,Smartphone,1,35350.03,0.1,35350.03,31815.03,Upi,Returned
+ORD-1239,2025-10-16,2025-10,CUST-069,Rohan Mehta,1999-02-26,27.0,Small Business,West,Partner,Smartphone,2,31228.34,0.0,62456.68,62456.68,Cash,Returned
+ORD-1014,2025-10-20,2025-10,CUST-053,Priya Nair,1993-08-08,32.0,Student,West,Retail,Monitor,1,18372.62,0.0,18372.62,18372.62,Cash,Completed
+ORD-1056,2025-10-23,2025-10,CUST-084,Sneha Rao,1976-03-16,50.0,Professional,Central,Retail,Monitor,5,23992.73,0.2,119963.65,95970.92,Cash,Completed
+ORD-1148,2025-10-24,2025-10,CUST-090,Aarav Sharma,1977-01-14,49.0,Student,West,Online,Mouse,1,934.36,0.0,934.36,934.36,Debit Card,Completed
+ORD-1123,2025-10-25,2025-10,CUST-078,Rohan Mehta,1979-03-22,47.0,Student,North,Online,Monitor,2,15543.74,0.0,31087.48,31087.48,Net Banking,Completed
+ORD-1178,2025-10-25,2025-10,CUST-048,Sneha Rao,1997-08-10,28.0,Professional,East,Online,Laptop,1,62770.04,0.2,62770.04,50216.03,Cash,Completed
+ORD-1159,2025-10-27,2025-10,CUST-020,Priya Nair,1993-12-14,32.0,Professional,West,Partner,Monitor,3,19601.29,0.0,58803.87,58803.87,Credit Card,Completed
+ORD-1084,2025-10-28,2025-10,CUST-086,Aarav Sharma,2005-09-18,20.0,Small Business,West,Partner,Keyboard,1,2768.63,0.0,2768.63,2768.63,Upi,Completed
+ORD-1013,2025-10-29,2025-10,CUST-081,Aarav Sharma,1982-01-03,44.0,Student,North,Retail,Smartphone,1,23156.82,0.15,23156.82,19683.3,Upi,Completed
+ORD-1189,2025-10-29,2025-10,CUST-079,Neha Gupta,1997-06-28,29.0,Professional,Central,Online,Keyboard,3,1028.68,0.0,3086.04,3086.04,Credit Card,Completed
+ORD-1226,2025-10-29,2025-10,CUST-089,Rohan Mehta,2001-03-13,25.0,Professional,North,Partner,Mouse,4,1688.79,0.05,6755.16,6417.4,Net Banking,Completed
+ORD-1061,2025-11-03,2025-11,CUST-044,Vikram Singh,2002-09-02,23.0,Student,East,Partner,Keyboard,2,1774.04,0.15,3548.08,3015.87,Debit Card,Completed
+ORD-1111,2025-11-03,2025-11,CUST-005,Rohan Mehta,1977-12-25,48.0,Student,South,Online,Mouse,1,1860.32,0.2,1860.32,1488.26,Debit Card,Completed
+ORD-1227,2025-11-05,2025-11,CUST-073,Aarav Sharma,1985-08-10,40.0,Professional,East,Partner,Keyboard,3,2858.33,0.15,8574.99,7288.74,Upi,Completed
+ORD-1020,2025-11-06,2025-11,CUST-080,Vikram Singh,2004-02-01,22.0,Student,Central,Online,Smartphone,2,16318.98,0.2,32637.96,26110.37,Net Banking,Completed
+ORD-1022,2025-11-06,2025-11,CUST-088,Neha Gupta,1981-11-12,44.0,Enterprise,East,Online,Laptop,4,80984.58,0.0,323938.32,323938.32,Upi,Completed
+ORD-1204,2025-11-08,2025-11,CUST-085,Neha Gupta,1976-05-22,50.0,Student,North,Partner,Laptop,1,87361.97,0.0,87361.97,87361.97,Credit Card,Completed
+ORD-1193,2025-11-09,2025-11,CUST-044,Vikram Singh,1983-06-27,43.0,Enterprise,East,Partner,Laptop,3,68920.06,0.1,206760.18,186084.16,Upi,Completed
+ORD-1231,2025-11-11,2025-11,CUST-056,Neha Gupta,2003-08-23,22.0,Enterprise,South,Online,Monitor,4,23626.71,0.05,94506.84,89781.5,Upi,Completed
+ORD-1051,2025-11-13,2025-11,CUST-057,Rohan Mehta,1982-09-13,43.0,Small Business,Central,Partner,Laptop,5,59145.8,0.1,295729.0,266156.1,Upi,Completed
+ORD-1169,2025-11-13,2025-11,CUST-011,Rohan Mehta,1984-04-23,42.0,Enterprise,South,Partner,Keyboard,1,2340.45,0.1,2340.45,2106.4,Cash,Completed
+ORD-1240,2025-11-13,2025-11,CUST-005,Sneha Rao,1994-11-23,31.0,Professional,North,Partner,Monitor,2,7636.92,0.05,15273.84,14510.15,Cash,Completed
+ORD-1173,2025-11-14,2025-11,CUST-056,Neha Gupta,1987-06-15,39.0,Small Business,East,Partner,Keyboard,1,1553.04,0.1,1553.04,1397.74,Credit Card,Completed
+ORD-1247,2025-11-16,2025-11,CUST-066,Neha Gupta,1987-04-10,39.0,Small Business,East,Partner,Keyboard,1,2006.75,0.2,2006.75,1605.4,Upi,Completed
+ORD-1071,2025-11-18,2025-11,CUST-040,Sneha Rao,1978-11-21,47.0,Small Business,South,Online,Mouse,3,2011.69,0.2,6035.07,4828.06,Debit Card,Completed
+ORD-1142,2025-11-24,2025-11,CUST-066,Rohan Mehta,2003-07-27,22.0,Enterprise,North,Online,Headphones,2,3980.59,0.0,7961.18,7961.18,Credit Card,Completed
+ORD-1009,2025-11-25,2025-11,CUST-021,Sneha Rao,1985-02-10,41.0,Small Business,Unknown,Online,Laptop,2,59009.31,0.15,118018.62,100315.83,Net Banking,Completed
+ORD-1086,2025-11-26,2025-11,CUST-089,Rohan Mehta,1992-01-20,34.0,Professional,East,Partner,Keyboard,3,3428.73,0.15,10286.19,8743.26,Debit Card,Completed
+ORD-1015,2025-11-27,2025-11,CUST-044,Aarav Sharma,1978-01-13,48.0,Professional,South,Partner,Keyboard,1,2282.2799999999997,0.2,2282.28,1825.82,Cash,Completed
+ORD-1149,2025-11-27,2025-11,CUST-058,Sneha Rao,2005-12-07,20.0,Student,Central,Online,Keyboard,1,1079.2,0.2,1079.2,863.36,Debit Card,Cancelled
+ORD-1098,2025-11-28,2025-11,CUST-072,Neha Gupta,1985-11-02,40.0,Small Business,East,Partner,Keyboard,3,2600.91,0.0,7802.73,7802.73,Net Banking,Completed
+ORD-1040,2025-11-30,2025-11,CUST-003,Vikram Singh,1976-01-08,50.0,Professional,South,Retail,Laptop,5,67248.61,0.2,336243.05,268994.44,Upi,Completed
+ORD-1094,2025-12-02,2025-12,CUST-064,Sneha Rao,1977-03-25,49.0,Small Business,East,Online,Smartphone,1,20446.95,0.0,20446.95,20446.95,Cash,Completed
+ORD-1165,2025-12-02,2025-12,CUST-073,Aarav Sharma,1990-07-21,35.0,Professional,South,Partner,Keyboard,2,857.12,0.0,1714.24,1714.24,Net Banking,Completed
+ORD-1110,2025-12-03,2025-12,CUST-043,Priya Nair,1995-02-25,31.0,Small Business,Central,Retail,Headphones,1,868.22,0.0,868.22,868.22,Credit Card,Completed
+ORD-1233,2025-12-05,2025-12,CUST-013,Aarav Sharma,1995-10-16,30.0,Professional,East,Online,Smartphone,1,12125.91,0.0,12125.91,12125.91,Cash,Completed
+ORD-1162,2025-12-08,2025-12,CUST-063,Aarav Sharma,2004-10-16,21.0,Enterprise,North,Online,Laptop,1,70960.34,0.0,70960.34,70960.34,Net Banking,Completed
+ORD-1238,2025-12-10,2025-12,CUST-067,Sneha Rao,1987-09-11,38.0,Enterprise,North,Retail,Monitor,1,22483.68,0.0,22483.68,22483.68,Credit Card,Completed
+ORD-1133,2025-12-15,2025-12,CUST-015,Priya Nair,1982-01-19,44.0,Enterprise,East,Retail,Monitor,2,17535.51,0.1,35071.02,31563.92,Credit Card,Completed
+ORD-1067,2025-12-16,2025-12,CUST-011,Vikram Singh,2000-06-03,26.0,Professional,West,Partner,Headphones,1,1411.39,0.15,1411.39,1199.68,Credit Card,Completed
+ORD-1236,2025-12-18,2025-12,CUST-061,Rohan Mehta,2002-08-19,23.0,Enterprise,North,Partner,Laptop,3,83644.18,0.1,250932.54,225839.29,Net Banking,Cancelled
+ORD-1132,2025-12-19,2025-12,CUST-034,Neha Gupta,1995-01-20,31.0,Student,Central,Retail,Headphones,2,4915.57,0.15,9831.14,8356.47,Credit Card,Completed
+ORD-1245,2025-12-19,2025-12,CUST-007,Priya Nair,1977-05-01,49.0,Professional,South,Partner,Headphones,1,4318.15,0.05,4318.15,4102.24,Credit Card,Completed
+ORD-1012,2025-12-20,2025-12,CUST-086,Neha Gupta,1981-10-12,44.0,Enterprise,Central,Retail,Headphones,2,3347.69,0.0,6695.38,6695.38,Upi,Returned
+ORD-1048,2025-12-20,2025-12,CUST-062,Rohan Mehta,1980-07-04,45.0,Student,South,Retail,Smartphone,1,18355.28,0.0,18355.28,18355.28,Credit Card,Completed
+ORD-1135,2025-12-21,2025-12,CUST-032,Rohan Mehta,1983-10-16,42.0,Professional,East,Retail,Monitor,1,13022.88,0.2,13022.88,10418.3,Credit Card,Completed
+ORD-1174,2025-12-22,2025-12,CUST-042,Sneha Rao,1995-08-19,30.0,Enterprise,East,Online,Keyboard,1,3400.81,0.05,3400.81,3230.77,Net Banking,Completed
+ORD-1163,2025-12-24,2025-12,CUST-014,Aarav Sharma,1996-07-26,29.0,Professional,South,Partner,Mouse,1,2452.71,0.0,2452.71,2452.71,Net Banking,Completed
+ORD-1119,2025-12-25,2025-12,CUST-066,Priya Nair,1995-03-26,31.0,Professional,South,Online,Headphones,4,4375.72,0.2,17502.88,14002.3,Cash,Completed
+ORD-1145,2025-12-26,2025-12,CUST-086,Priya Nair,1992-08-25,33.0,Student,Central,Retail,Smartphone,1,27014.3,0.15,27014.3,22962.16,Net Banking,Completed
+ORD-1004,2025-12-27,2025-12,CUST-038,Aarav Sharma,1977-01-22,49.0,Student,West,Retail,Headphones,3,3397.78,0.05,10193.34,9683.67,Cash,Completed
+ORD-1066,2025-12-27,2025-12,CUST-089,Rohan Mehta,2002-02-15,24.0,Student,East,Online,Smartphone,2,26321.06,0.0,52642.12,52642.12,Debit Card,Completed
+ORD-1182,2025-12-27,2025-12,CUST-069,Priya Nair,2000-02-19,26.0,Small Business,South,Retail,Monitor,1,7075.65,0.0,7075.65,7075.65,Upi,Completed
+ORD-1215,2025-12-27,2025-12,CUST-042,Priya Nair,1997-10-02,28.0,Professional,East,Retail,Headphones,3,1179.77,0.2,3539.31,2831.45,Net Banking,Completed
+ORD-1063,2025-12-28,2025-12,CUST-084,Priya Nair,2004-07-13,21.0,Student,South,Partner,Smartphone,3,25555.58,0.05,76666.74,72833.4,Net Banking,Completed
+ORD-1122,2025-12-30,2025-12,CUST-011,Rohan Mehta,1982-06-17,44.0,Small Business,South,Partner,Laptop,2,65644.36,0.0,131288.72,131288.72,Debit Card,Completed
+ORD-1180,2025-12-30,2025-12,CUST-083,Aarav Sharma,1978-01-28,48.0,Professional,Central,Online,Mouse,2,1069.71,0.05,2139.42,2032.45,Net Banking,Completed
+ORD-1191,2025-12-31,2025-12,CUST-051,Sneha Rao,1985-04-25,41.0,Small Business,West,Retail,Headphones,3,1332.93,0.0,3998.79,3998.79,Cash,Completed
