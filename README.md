@@ -1,6 +1,6 @@
 # Task 1: Data Immersion & Wrangling
 
-This repository contains the Task 1 submission for the 60-day Data Analytics internship: acquiring, profiling, cleaning, transforming, and preparing a dataset for analysis.
+The objective of this project is to perform end-to-end data preprocessing, including data acquisition, profiling, cleaning, transformation, and preparation of a raw dataset for analytical purposes. The project demonstrates practical implementation of data wrangling techniques using Python and Pandas to improve data quality and create an analysis-ready dataset.
 
 ## Objective
 
