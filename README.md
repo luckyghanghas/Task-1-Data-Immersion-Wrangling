@@ -15,8 +15,7 @@ data/
 reports/
   data_dictionary.md
   data_quality_report.md
-  linkedin_video_script.md
-scripts/
+ scripts/
   generate_sample_data.py
   clean_sales_data.py
 requirements.txt
@@ -54,8 +53,7 @@ python scripts/clean_sales_data.py
 - Cleaning script: `scripts/clean_sales_data.py`
 - Cleaned dataset: `data/sales_transactions_cleaned.csv`
 - Data quality report: `reports/data_quality_report.md`
-- LinkedIn video script: `reports/linkedin_video_script.md`
-
+  
 ## Key Learning
 
 This task demonstrates practical data wrangling skills: profiling raw data, documenting dataset structure, applying reproducible cleaning logic, and preparing a dataset for later EDA and business intelligence work.
