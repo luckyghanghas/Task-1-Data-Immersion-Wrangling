@@ -1,148 +1,205 @@
-from __future__ import annotations
+"""
+clean_sales_data.py
+Comprehensive data cleaning and transformation pipeline for sales transactions.
+Handles missing values, duplicates, formatting, and feature engineering.
+"""
 
-from pathlib import Path
-
-import numpy as np
 import pandas as pd
+import numpy as np
+from datetime import datetime
+import warnings
+warnings.filterwarnings('ignore')
 
+class SalesDataCleaner:
+    """Pipeline for cleaning and transforming sales transaction data."""
+    
+    def __init__(self, raw_data_path='data/sales_transactions_raw.csv'):
+        """Initialize cleaner with raw data."""
+        self.raw_data_path = raw_data_path
+        self.df = None
+        self.cleaning_log = []
+        self.quality_metrics = {}
+        
+    def load_data(self):
+        """Load raw data from CSV."""
+        print("📂 Loading raw data...")
+        self.df = pd.read_csv(self.raw_data_path)
+        self.quality_metrics['initial_shape'] = self.df.shape
+        print(f"✅ Loaded {self.df.shape[0]} rows × {self.df.shape[1]} columns")
+        return self
+    
+    def profile_data(self):
+        """Generate initial data quality report."""
+        print("\n📊 Profiling data quality issues...")
+        
+        missing_summary = self.df.isnull().sum()
+        for col, count in missing_summary[missing_summary > 0].items():
+            pct = (count / len(self.df)) * 100
+            msg = f"   • {col}: {count} missing ({pct:.2f}%)"
+            print(msg)
+            self.cleaning_log.append(msg)
+        
+        duplicates = self.df.duplicated().sum()
+        if duplicates > 0:
+            msg = f"   • Duplicate rows: {duplicates}"
+            print(msg)
+            self.cleaning_log.append(msg)
+        
+        self.quality_metrics['initial_duplicates'] = duplicates
+        self.quality_metrics['initial_missing'] = missing_summary
+        return self
+    
+    def remove_duplicates(self):
+        """Remove duplicate rows."""
+        print("\n🔄 Removing duplicates...")
+        initial_count = len(self.df)
+        self.df = self.df.drop_duplicates(subset=['transaction_id', 'date', 'product_name', 'quantity', 'unit_price'], keep='first')
+        removed = initial_count - len(self.df)
+        msg = f"   ✅ Removed {removed} duplicate rows"
+        print(msg)
+        self.cleaning_log.append(msg)
+        self.quality_metrics['duplicates_removed'] = removed
+        return self
+    
+    def standardize_text_columns(self):
+        """Standardize text column formatting."""
+        print("\n✏️ Standardizing text columns...")
+        
+        self.df['product_category'] = self.df['product_category'].str.strip().str.title()
+        self.df['sales_channel'] = self.df['sales_channel'].str.strip().str.title()
+        self.df['customer_segment'] = self.df['customer_segment'].str.strip().str.title()
+        self.df['payment_mode'] = self.df['payment_mode'].str.strip().str.title()
+        self.df['order_status'] = self.df['order_status'].str.strip().str.title()
+        
+        msg = f"   ✅ Standardized all text columns"
+        print(msg)
+        self.cleaning_log.append(msg)
+        return self
+    
+    def clean_dates(self):
+        """Convert and standardize date formats."""
+        print("\n📅 Cleaning date fields...")
+        
+        self.df['date'] = pd.to_datetime(self.df['date'], errors='coerce')
+        
+        if self.df['date'].isnull().any():
+            median_date = self.df['date'].median()
+            self.df['date'].fillna(median_date, inplace=True)
+        
+        self.df['date_of_birth'] = pd.to_datetime(self.df['date_of_birth'], errors='coerce')
+        
+        msg = f"   ✅ Standardized date formats to YYYY-MM-DD"
+        print(msg)
+        self.cleaning_log.append(msg)
+        return self
+    
+    def clean_numeric_fields(self):
+        """Handle invalid and outlier values in numeric columns."""
+        print("\n🔢 Cleaning numeric fields...")
+        
+        # Clean quantity
+        self.df['quantity'].fillna(1, inplace=True)
+        self.df.loc[self.df['quantity'] <= 0, 'quantity'] = 1
+        self.df.loc[self.df['quantity'] > 100, 'quantity'] = 100
+        
+        # Clean unit_price
+        median_price = self.df['unit_price'][self.df['unit_price'] > 0].median()
+        self.df['unit_price'].fillna(median_price, inplace=True)
+        self.df.loc[self.df['unit_price'] <= 0, 'unit_price'] = median_price
+        
+        # Clean discount_percent
+        self.df['discount_percent'].fillna(0, inplace=True)
+        self.df.loc[self.df['discount_percent'] < 0, 'discount_percent'] = 0
+        self.df.loc[self.df['discount_percent'] > 100, 'discount_percent'] = 100
+        
+        msg = f"   ✅ Cleaned all numeric fields (quantity, price, discount)"
+        print(msg)
+        self.cleaning_log.append(msg)
+        return self
+    
+    def engineer_features(self):
+        """Create derived features for analysis."""
+        print("\n⚙️ Engineering features...")
+        
+        # Customer age from date_of_birth
+        today = pd.Timestamp.now()
+        self.df['customer_age'] = (today - self.df['date_of_birth']).dt.days // 365
+        self.df['customer_age'].fillna(self.df['customer_age'].median(), inplace=True)
+        self.df.loc[self.df['customer_age'] < 18, 'customer_age'] = 18
+        self.df.loc[self.df['customer_age'] > 100, 'customer_age'] = 100
+        
+        # Gross revenue
+        self.df['gross_revenue'] = self.df['quantity'] * self.df['unit_price']
+        
+        # Net revenue (after discount)
+        self.df['net_revenue'] = self.df['gross_revenue'] * (1 - self.df['discount_percent'] / 100)
+        
+        # Order month
+        self.df['order_month'] = self.df['date'].dt.strftime('%Y-%m')
+        
+        msg = f"   ✅ Created derived features: customer_age, gross_revenue, net_revenue, order_month"
+        print(msg)
+        self.cleaning_log.append(msg)
+        return self
+    
+    def drop_unnecessary_columns(self):
+        """Drop columns no longer needed."""
+        print("\n🗑️ Removing unnecessary columns...")
+        self.df = self.df.drop(columns=['date_of_birth'])
+        msg = f"   ✅ Dropped date_of_birth column"
+        print(msg)
+        self.cleaning_log.append(msg)
+        return self
+    
+    def validate_and_export(self):
+        """Validate cleaned data and export."""
+        print("\n✅ Validating cleaned data...")
+        
+        missing = self.df.isnull().sum().sum()
+        msg = f"   • Missing values: {missing}"
+        print(msg)
+        self.cleaning_log.append(msg)
+        
+        msg = f"   • Final shape: {self.df.shape[0]} rows × {self.df.shape[1]} columns"
+        print(msg)
+        self.cleaning_log.append(msg)
+        
+        output_path = 'data/sales_transactions_cleaned.csv'
+        self.df.to_csv(output_path, index=False)
+        msg = f"   ✅ Exported cleaned data to {output_path}"
+        print(msg)
+        self.cleaning_log.append(msg)
+        
+        self.quality_metrics['final_shape'] = self.df.shape
+        return self
+    
+    def run_pipeline(self):
+        """Execute the complete cleaning pipeline."""
+        print("\n" + "="*60)
+        print("🚀 TASK-1: Data Immersion & Wrangling Pipeline")
+        print("="*60)
+        
+        self.load_data()\
+            .profile_data()\
+            .remove_duplicates()\
+            .standardize_text_columns()\
+            .clean_dates()\
+            .clean_numeric_fields()\
+            .engineer_features()\
+            .drop_unnecessary_columns()\
+            .validate_and_export()
+        
+        print("\n" + "="*60)
+        print("✅ Pipeline Completed Successfully!")
+        print("="*60)
+        print(f"📊 Records processed: {self.quality_metrics['initial_shape'][0]}")
+        print(f"📈 Final dataset shape: {self.quality_metrics['final_shape']}")
+        print(f"💾 Output: data/sales_transactions_cleaned.csv")
 
-ROOT = Path(__file__).resolve().parents[1]
-RAW_PATH = ROOT / "data" / "sales_transactions_raw.csv"
-CLEAN_PATH = ROOT / "data" / "sales_transactions_cleaned.csv"
-PROFILE_PATH = ROOT / "reports" / "data_quality_report.md"
+def main():
+    """Run the data cleaning pipeline."""
+    cleaner = SalesDataCleaner()
+    cleaner.run_pipeline()
 
-
-def parse_mixed_dates(series: pd.Series) -> pd.Series:
-    parsed = pd.to_datetime(series, errors="coerce", dayfirst=False, format="mixed")
-    missing = parsed.isna()
-    if missing.any():
-        parsed.loc[missing] = pd.to_datetime(series.loc[missing], errors="coerce", dayfirst=True, format="mixed")
-    return parsed
-
-
-def main() -> None:
-    df = pd.read_csv(RAW_PATH)
-    original_rows = len(df)
-    original_columns = len(df.columns)
-
-    duplicate_rows = int(df.duplicated().sum())
-    missing_before = df.isna().sum().to_dict()
-
-    df = df.drop_duplicates().copy()
-
-    df.columns = [col.strip().lower() for col in df.columns]
-    text_columns = [
-        "customer_name",
-        "customer_segment",
-        "region",
-        "sales_channel",
-        "product",
-        "payment_mode",
-        "order_status",
-    ]
-    for col in text_columns:
-        df[col] = df[col].astype("string").str.strip().str.title()
-
-    df["product"] = df["product"].replace(
-        {
-            "Smart Phone": "Smartphone",
-            "Head Phones": "Headphones",
-        }
-    )
-    df["sales_channel"] = df["sales_channel"].replace({"Web": "Online"})
-
-    df["order_date"] = parse_mixed_dates(df["order_date"])
-    df["customer_dob"] = parse_mixed_dates(df["customer_dob"])
-    rows_without_required_dates = int(df[["order_date", "customer_dob"]].isna().any(axis=1).sum())
-    df = df.dropna(subset=["order_date", "customer_dob"]).copy()
-
-    df["quantity"] = pd.to_numeric(df["quantity"], errors="coerce")
-    df["unit_price"] = pd.to_numeric(df["unit_price"], errors="coerce")
-    df["discount_rate"] = pd.to_numeric(df["discount_rate"], errors="coerce")
-
-    df.loc[df["quantity"] <= 0, "quantity"] = np.nan
-    df.loc[(df["discount_rate"] < 0) | (df["discount_rate"] > 0.8), "discount_rate"] = np.nan
-
-    price_cap = df["unit_price"].quantile(0.99)
-    df.loc[df["unit_price"] > price_cap, "unit_price"] = np.nan
-
-    df["region"] = df["region"].fillna("Unknown")
-    df["discount_rate"] = df["discount_rate"].fillna(0)
-    df["quantity"] = df["quantity"].fillna(df["quantity"].median()).astype(int)
-    df["unit_price"] = df.groupby("product")["unit_price"].transform(lambda s: s.fillna(s.median()))
-
-    reference_date = pd.Timestamp("2026-01-01")
-    df["customer_age"] = ((reference_date - df["customer_dob"]).dt.days / 365.25).round()
-    df["gross_revenue"] = (df["quantity"] * df["unit_price"]).round(2)
-    df["net_revenue"] = (df["gross_revenue"] * (1 - df["discount_rate"])).round(2)
-    df["order_month"] = df["order_date"].dt.to_period("M").astype(str)
-
-    final_columns = [
-        "order_id",
-        "order_date",
-        "order_month",
-        "customer_id",
-        "customer_name",
-        "customer_dob",
-        "customer_age",
-        "customer_segment",
-        "region",
-        "sales_channel",
-        "product",
-        "quantity",
-        "unit_price",
-        "discount_rate",
-        "gross_revenue",
-        "net_revenue",
-        "payment_mode",
-        "order_status",
-    ]
-    df = df[final_columns].sort_values(["order_date", "order_id"])
-
-    CLEAN_PATH.parent.mkdir(parents=True, exist_ok=True)
-    PROFILE_PATH.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(CLEAN_PATH, index=False)
-
-    missing_after = df.isna().sum().to_dict()
-    report = [
-        "# Data Quality Report",
-        "",
-        "## Dataset Profile",
-        f"- Raw rows: {original_rows}",
-        f"- Raw columns: {original_columns}",
-        f"- Duplicate rows removed: {duplicate_rows}",
-        f"- Rows removed due to missing required dates: {rows_without_required_dates}",
-        f"- Cleaned rows: {len(df)}",
-        f"- Cleaned columns: {len(df.columns)}",
-        "",
-        "## Issues Found",
-        "- Missing values in region, unit_price, and customer_dob.",
-        "- Duplicate transaction rows.",
-        "- Mixed date formats in order_date and customer_dob.",
-        "- Inconsistent category labels such as smart phone, Head Phones, and web.",
-        "- Invalid quantity, discount, and outlier price values.",
-        "",
-        "## Cleaning Actions",
-        "- Removed duplicate rows.",
-        "- Standardized column names and text categories.",
-        "- Parsed dates into a consistent ISO-style format.",
-        "- Replaced invalid quantity and price values with product-aware or dataset median values.",
-        "- Filled unknown regions and missing discount rates.",
-        "- Added customer_age, gross_revenue, net_revenue, and order_month for analysis.",
-        "",
-        "## Missing Values Before Cleaning",
-        *[f"- {key}: {value}" for key, value in missing_before.items() if value],
-        "",
-        "## Missing Values After Cleaning",
-        *[f"- {key}: {value}" for key, value in missing_after.items() if value],
-    ]
-    if all(value == 0 for value in missing_after.values()):
-        report.append("- No missing values remain in the cleaned dataset.")
-
-    PROFILE_PATH.write_text("\n".join(report) + "\n", encoding="utf-8")
-    print(f"Wrote {CLEAN_PATH}")
-    print(f"Wrote {PROFILE_PATH}")
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
