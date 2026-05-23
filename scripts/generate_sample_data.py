@@ -1,84 +1,117 @@
-from __future__ import annotations
+"""
+generate_sample_data.py
+Generates a sample sales transactions dataset with realistic data quality issues.
+This raw dataset is used as input for the data cleaning pipeline.
+"""
 
+import pandas as pd
+import numpy as np
 from datetime import datetime, timedelta
-from pathlib import Path
 import random
 
-import numpy as np
-import pandas as pd
-
-
-ROOT = Path(__file__).resolve().parents[1]
-RAW_PATH = ROOT / "data" / "sales_transactions_raw.csv"
-
-
-random.seed(42)
 np.random.seed(42)
+random.seed(42)
 
-products = {
-    "Laptop": (55000, 90000),
-    "Smartphone": (12000, 45000),
-    "Headphones": (800, 5000),
-    "Keyboard": (700, 3500),
-    "Monitor": (7000, 24000),
-    "Mouse": (400, 2500),
-}
-regions = ["North", "South", "East", "West", "Central"]
-channels = ["Online", "Retail", "Partner"]
-payment_modes = ["UPI", "Credit Card", "Debit Card", "Cash", "Net Banking"]
-customer_segments = ["Student", "Professional", "Small Business", "Enterprise"]
-statuses = ["Completed", "Returned", "Cancelled"]
+def generate_sample_data(n_records=5000):
+    """Generate synthetic sales transactions data with intentional data quality issues."""
+    
+    product_categories = ['Electronics', 'Clothing', 'Home & Garden', 'Sports', 'Books']
+    sales_channels = ['Online', 'Retail', 'Wholesale', 'direct sales', 'ONLINE', 'online']
+    customer_segments = ['Premium', 'Standard', 'Basic', 'premium', 'BASIC', 'standard']
+    payment_modes = ['Credit Card', 'Debit Card', 'Cash', 'Digital Wallet', 'credit card', 'CASH']
+    order_statuses = ['Completed', 'Pending', 'Cancelled', 'Returned', 'completed', 'pending ']
+    
+    product_names = {
+        'Electronics': ['Laptop', 'Smartphone', 'Tablet', 'Headphones', 'Smart Watch'],
+        'Clothing': ['T-Shirt', 'Jeans', 'Jacket', 'Dress', 'Shoes'],
+        'Home & Garden': ['Sofa', 'Table', 'Plant Pot', 'Lamp', 'Rug'],
+        'Sports': ['Running Shoes', 'Yoga Mat', 'Dumbbell', 'Tennis Racket', 'Bicycle'],
+        'Books': ['Fiction Novel', 'Self-Help Book', 'Cookbook', 'Mystery', 'Biography']
+    }
+    
+    data = {
+        'transaction_id': [f'TXN_{str(i).zfill(6)}' for i in range(1, n_records + 1)],
+        'date': [],
+        'product_category': [],
+        'product_name': [],
+        'quantity': [],
+        'unit_price': [],
+        'discount_percent': [],
+        'sales_channel': [],
+        'customer_segment': [],
+        'date_of_birth': [],
+        'payment_mode': [],
+        'order_status': []
+    }
+    
+    start_date = datetime(2023, 1, 1)
+    end_date = datetime(2024, 12, 31)
+    date_range = (end_date - start_date).days
+    
+    for _ in range(n_records):
+        random_days = random.randint(0, date_range)
+        transaction_date = start_date + timedelta(days=random_days)
+        data['date'].append(transaction_date.strftime('%Y-%m-%d'))
+    
+    for _ in range(n_records):
+        category = random.choice(product_categories)
+        data['product_category'].append(category)
+        data['product_name'].append(random.choice(product_names[category]))
+    
+    for _ in range(n_records):
+        if random.random() < 0.05:
+            data['quantity'].append(np.nan if random.random() < 0.5 else random.choice([-1, 0, 100]))
+        else:
+            data['quantity'].append(random.randint(1, 10))
+    
+    for _ in range(n_records):
+        if random.random() < 0.03:
+            data['unit_price'].append(np.nan if random.random() < 0.5 else random.choice([-50, 0]))
+        else:
+            data['unit_price'].append(round(random.uniform(10, 500), 2))
+    
+    for _ in range(n_records):
+        if random.random() < 0.08:
+            data['discount_percent'].append(np.nan if random.random() < 0.5 else random.choice([-10, 150]))
+        else:
+            data['discount_percent'].append(round(random.uniform(0, 50), 2))
+    
+    data['sales_channel'] = [random.choice(sales_channels) for _ in range(n_records)]
+    data['customer_segment'] = [random.choice(customer_segments) for _ in range(n_records)]
+    
+    for _ in range(n_records):
+        if random.random() < 0.10:
+            data['date_of_birth'].append(np.nan)
+        else:
+            age = random.randint(18, 80)
+            dob = datetime.now() - timedelta(days=age*365)
+            data['date_of_birth'].append(dob.strftime('%Y-%m-%d'))
+    
+    data['payment_mode'] = [random.choice(payment_modes) for _ in range(n_records)]
+    data['order_status'] = [random.choice(order_statuses) for _ in range(n_records)]
+    
+    df = pd.DataFrame(data)
+    
+    n_duplicates = int(n_records * 0.02)
+    if n_duplicates > 0:
+        duplicate_indices = np.random.choice(df.index, n_duplicates, replace=False)
+        duplicates = df.loc[duplicate_indices].copy()
+        duplicates['transaction_id'] = [f'TXN_{str(n_records + i).zfill(6)}' for i in range(n_duplicates)]
+        df = pd.concat([df, duplicates], ignore_index=True)
+    
+    return df
 
-rows = []
-start_date = datetime(2025, 1, 1)
+def main():
+    """Generate and save sample data to CSV."""
+    print("🔄 Generating sample sales transactions data...")
+    df = generate_sample_data(n_records=5000)
+    
+    output_path = 'data/sales_transactions_raw.csv'
+    df.to_csv(output_path, index=False)
+    
+    print(f"✅ Sample data generated successfully!")
+    print(f"📊 Dataset shape: {df.shape[0]} rows × {df.shape[1]} columns")
+    print(f"💾 Saved to: {output_path}")
 
-for i in range(1, 251):
-    product = random.choice(list(products))
-    low, high = products[product]
-    quantity = random.choices([1, 2, 3, 4, 5], weights=[50, 25, 12, 8, 5])[0]
-    unit_price = round(random.uniform(low, high), 2)
-    discount = random.choice([0, 0, 0.05, 0.1, 0.15, 0.2])
-    status = random.choices(statuses, weights=[85, 10, 5])[0]
-    order_date = start_date + timedelta(days=random.randint(0, 364))
-    dob = datetime(random.randint(1975, 2005), random.randint(1, 12), random.randint(1, 28))
-
-    rows.append(
-        {
-            "order_id": f"ORD-{1000+i}",
-            "order_date": order_date.strftime(random.choice(["%Y-%m-%d", "%d/%m/%Y", "%m-%d-%Y"])),
-            "customer_id": f"CUST-{random.randint(1, 90):03d}",
-            "customer_name": random.choice(
-                ["Aarav Sharma", "Priya Nair", "Rohan Mehta", "Sneha Rao", "Vikram Singh", "Neha Gupta"]
-            ),
-            "customer_dob": dob.strftime(random.choice(["%Y-%m-%d", "%d/%m/%Y"])),
-            "customer_segment": random.choice(customer_segments),
-            "region": random.choice(regions),
-            "sales_channel": random.choice(channels),
-            "product": product,
-            "quantity": quantity,
-            "unit_price": unit_price,
-            "discount_rate": discount,
-            "payment_mode": random.choice(payment_modes),
-            "order_status": status,
-        }
-    )
-
-df = pd.DataFrame(rows)
-
-# Inject realistic data quality issues for the cleaning task.
-df.loc[[8, 29, 61], "region"] = np.nan
-df.loc[[14, 73], "unit_price"] = np.nan
-df.loc[[35, 114], "customer_dob"] = np.nan
-df.loc[19, "quantity"] = -2
-df.loc[87, "discount_rate"] = 1.25
-df.loc[123, "unit_price"] = 999999
-df.loc[47, "product"] = "smart phone"
-df.loc[68, "product"] = "Head Phones"
-df.loc[91, "sales_channel"] = "web"
-
-duplicates = df.sample(6, random_state=11)
-df = pd.concat([df, duplicates], ignore_index=True)
-
-RAW_PATH.parent.mkdir(parents=True, exist_ok=True)
-df.to_csv(RAW_PATH, index=False)
-print(f"Wrote {RAW_PATH} with {len(df)} rows")
+if __name__ == '__main__':
+    main()
