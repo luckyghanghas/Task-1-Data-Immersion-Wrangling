@@ -1,32 +1,30 @@
-# Data Quality Report
+# Task 1 - Data Immersion & Wrangling
 
-## Dataset Profile
-- Raw rows: 256
-- Raw columns: 14
-- Duplicate rows removed: 6
-- Rows removed due to missing required dates: 2
-- Cleaned rows: 248
-- Cleaned columns: 18
+## Objective
+Prepare a sales transaction dataset for analysis by profiling the raw data, fixing quality issues, and creating a clean analysis-ready file.
 
-## Issues Found
-- Missing values in region, unit_price, and customer_dob.
-- Duplicate transaction rows.
-- Mixed date formats in order_date and customer_dob.
-- Inconsistent category labels such as smart phone, Head Phones, and web.
-- Invalid quantity, discount, and outlier price values.
+## Dataset Overview
+- Raw rows received: 1,260
+- Final cleaned rows: 1,250
+- Date range after cleaning: 2025-01-01 to 2026-03-26
+- Business grain: one row per order
 
-## Cleaning Actions
-- Removed duplicate rows.
-- Standardized column names and text categories.
-- Parsed dates into a consistent ISO-style format.
-- Replaced invalid quantity and price values with product-aware or dataset median values.
-- Filled unknown regions and missing discount rates.
-- Added customer_age, gross_revenue, net_revenue, and order_month for analysis.
+## Data Quality Issues Found
+| Issue | What I found | Treatment |
+|---|---:|---|
+| Duplicate orders | 10 rows | Removed by keeping the first record for each `order_id`. |
+| Mixed date formats | Multiple formats such as yyyy-mm-dd, dd/mm/yyyy, and mm-dd-yyyy | Parsed and standardized to ISO date format. |
+| Inconsistent text casing | Region values appeared as lowercase in some rows | Trimmed whitespace and converted to title case. |
+| Missing payment method | 4 rows | Replaced blanks with `Unknown` to preserve the transaction. |
+| Missing customer age | 3 rows | Filled with median age to avoid losing useful sales records. |
+| Revenue outliers | 2 visible pricing/revenue scale errors | Corrected unit price scale and recalculated revenue from base fields. |
 
-## Missing Values Before Cleaning
-- customer_dob: 2
-- region: 3
-- unit_price: 2
+## New Fields Created
+- `gross_profit`: revenue minus cost.
+- `gross_margin`: gross profit divided by revenue.
+- `month`: reporting month for trends.
+- `age_group`: customer segment based on age.
+- `returned_flag`: numeric return indicator for dashboards and statistics.
 
-## Missing Values After Cleaning
-- No missing values remain in the cleaned dataset.
+## Final Output
+The cleaned file is saved at `data/cleaned/sales_transactions_cleaned.csv`.

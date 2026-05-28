@@ -1,22 +1,27 @@
 # Data Dictionary
 
-| Column | Type | Description | Business Relevance |
-|---|---|---|---|
-| order_id | Text | Unique identifier for each order. | Used to track transactions and remove duplicates. |
-| order_date | Date | Date when the order was placed. | Supports trend, seasonality, and monthly performance analysis. |
-| order_month | Text | Year-month derived from order_date. | Useful for monthly KPI reporting. |
-| customer_id | Text | Unique identifier for a customer. | Enables customer-level behavior and retention analysis. |
-| customer_name | Text | Customer name. | Helpful for record inspection, not usually used for aggregate analysis. |
-| customer_dob | Date | Customer date of birth. | Used to calculate customer age. |
-| customer_age | Numeric | Customer age as of the analysis reference date. | Enables age-group segmentation. |
-| customer_segment | Text | Customer category such as Student, Professional, Small Business, or Enterprise. | Supports segment-level performance analysis. |
-| region | Text | Customer or sales region. | Supports geographic performance comparison. |
-| sales_channel | Text | Channel where the sale occurred: Online, Retail, or Partner. | Helps compare channel effectiveness. |
-| product | Text | Product purchased. | Used for product-level revenue and demand analysis. |
-| quantity | Integer | Number of units purchased. | Required for volume and revenue calculations. |
-| unit_price | Numeric | Price per unit before discount. | Required for revenue calculations and price analysis. |
-| discount_rate | Numeric | Discount applied to the order. | Helps evaluate discounting impact on revenue. |
-| gross_revenue | Numeric | quantity multiplied by unit_price. | Measures revenue before discounts. |
-| net_revenue | Numeric | Gross revenue after discount. | Measures realized sales revenue. |
-| payment_mode | Text | Payment method used by the customer. | Useful for operational and payment preference analysis. |
-| order_status | Text | Completed, Returned, or Cancelled. | Supports fulfillment and return/cancellation analysis. |
+| Column | Type | Business relevance |
+|---|---|---|
+| order_id | Text | Unique order identifier used for transaction-level joins. |
+| order_date | Date | Purchase date standardized to ISO format. |
+| customer_id | Text | Customer key used to calculate repeat purchase and cohort behavior. |
+| customer_age | Integer | Customer age after median imputation for missing values. |
+| region | Text | Sales region: North, South, East, or West. |
+| sales_channel | Text | Acquisition/sales channel: Website, Mobile App, or Retail Store. |
+| product_name | Text | Product purchased. |
+| category | Text | Product family used for product-level analysis. |
+| quantity | Integer | Units purchased in the order. |
+| unit_price | Decimal | Unit selling price before discount. |
+| discount_rate | Decimal | Order discount percentage stored as a decimal. |
+| revenue | Decimal | Net order revenue after discount. |
+| cost | Decimal | Estimated fulfillment/product cost. |
+| gross_profit | Decimal | Revenue less cost. |
+| gross_margin | Decimal | Gross profit divided by revenue. |
+| campaign | Text | Marketing campaign or source credited to the order. |
+| payment_method | Text | Payment mode, with blanks replaced by Unknown. |
+| delivery_days | Integer | Days taken to deliver the order. |
+| customer_rating | Integer | Customer rating from 1 to 5. |
+| returned | Text | Yes/No return indicator. |
+| returned_flag | Integer | Return indicator converted to 1/0 for calculations. |
+| month | Text | Year-month field used for time-series reporting. |
+| age_group | Text | Customer age band for segmentation. |
