@@ -1,12 +1,57 @@
 from datetime import datetime
 import pandas as pd
 import numpy as np
+import os
+from pathlib import Path
 
 # File paths
 transactions_raw_path = "data/sales_transactions_raw.csv"
 cleaned_output_path = "data/cleaned_analytics_dataset.csv"
 
 print("🚀 STARTING DATA WRANGLING PIPELINE...\n")
+
+def get_user_home():
+    """Get the user's home directory."""
+    return str(Path.home())
+
+def get_save_location():
+    """Interactive menu to select save location."""
+    print("\n" + "="*60)
+    print("📁 WHERE WOULD YOU LIKE TO SAVE THE CLEANED FILE?")
+    print("="*60)
+    print("1️  Project Folder (data/)")
+    print("2️  Desktop")
+    print("3️  Downloads")
+    print("4️  Custom Path")
+    print("="*60)
+    
+    choice = input("Enter your choice (1-4): ").strip()
+    
+    home = get_user_home()
+    
+    if choice == '1':
+        output_path = 'data/cleaned_analytics_dataset.csv'
+        location_name = "Project Folder"
+    elif choice == '2':
+        desktop_path = os.path.join(home, 'Desktop')
+        output_path = os.path.join(desktop_path, 'cleaned_analytics_dataset.csv')
+        location_name = "Desktop"
+    elif choice == '3':
+        downloads_path = os.path.join(home, 'Downloads')
+        output_path = os.path.join(downloads_path, 'cleaned_analytics_dataset.csv')
+        location_name = "Downloads"
+    elif choice == '4':
+        custom_path = input("Enter full path (or just filename for current directory): ").strip()
+        if not custom_path.endswith('.csv'):
+            custom_path += '.csv'
+        output_path = custom_path
+        location_name = "Custom Path"
+    else:
+        print("❌ Invalid choice! Defaulting to Project Folder...")
+        output_path = 'data/cleaned_analytics_dataset.csv'
+        location_name = "Project Folder (Default)"
+    
+    return output_path, location_name
 
 # ========== LOAD DATA ==========
 print("📖 Reading raw files into memory...\n")
@@ -75,14 +120,31 @@ print()
 # ========== EXPORT DATA ==========
 print("💾 Exporting production files...")
 
-transactions_df.to_csv(cleaned_output_path, index=False)
+# Get save location from user
+output_path, location_name = get_save_location()
 
-# ========== FINAL SUMMARY ==========
-final_rows = len(transactions_df)
-final_cols = len(transactions_df.columns)
+# Create directory if it doesn't exist
+output_dir = os.path.dirname(output_path)
+if output_dir:  # Only create if there's a directory component
+    os.makedirs(output_dir, exist_ok=True)
 
-print()
-print("🎉 SUCCESS: Data Wrangling pipeline finished successfully!")
-print(f"📍 Final Output Created: {cleaned_output_path}")
-print(f"📊 Final Dimensions Matrix: {final_rows:,} rows x {final_cols} columns")
-print()
+# Save the file
+try:
+    transactions_df.to_csv(output_path, index=False)
+    
+    # ========== FINAL SUMMARY ==========
+    final_rows = len(transactions_df)
+    final_cols = len(transactions_df.columns)
+
+    print()
+    print("="*60)
+    print("🎉 SUCCESS: Data Wrangling pipeline finished successfully!")
+    print("="*60)
+    print(f"📍 Final Output Created: {os.path.abspath(output_path)}")
+    print(f"📁 Location: {location_name}")
+    print(f"📊 Final Dimensions Matrix: {final_rows:,} rows x {final_cols} columns")
+    print("="*60)
+    print()
+except Exception as e:
+    print(f"\n❌ Error saving file: {e}")
+    print("Please check the path and try again.")
