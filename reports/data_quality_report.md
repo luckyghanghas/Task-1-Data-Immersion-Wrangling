@@ -1,7 +1,7 @@
 # Task 1 - Data Immersion & Wrangling
 
 ## Objective
-Prepare a sales transaction dataset for analysis by profiling the raw data, fixing quality issues, and creating a clean analysis-ready file.
+Produce a sales transaction data set for analysis by cleaning up the raw data, identifying quality issues, and fixing them, creating a dataset for analysis.
 
 ## Dataset Overview
 - Raw rows received: 1,260
