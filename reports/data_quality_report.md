@@ -27,11 +27,11 @@ Produce a sales transaction data set for analysis by cleaning up the raw data, i
 ## Data Cleaning Pipeline Features
 
 ### 1. **Flexible Output Location**
-The cleaning script now includes an interactive menu allowing users to save the cleaned dataset to:
+The cleaning script now includes an interactive menu allowing users to save the cleaned and generate dataset to:
 - ✅ **Project Folder** (default): `data/cleaned_analytics_dataset.csv`
-- 🖥️ **Desktop**: `~/Desktop/cleaned_analytics_dataset.csv`
-- ⬇️ **Downloads**: `~/Downloads/cleaned_analytics_dataset.csv`
-- 🔧 **Custom Path**: User-defined location
+- 🖥️ **Desktop** 
+- ⬇️ **Downloads** 
+- 🔧 **Custom Path** 
 
 ### 2. **Automated Directory Creation**
 The script automatically creates parent directories if they don't exist, ensuring seamless file saving.
@@ -41,7 +41,7 @@ The script automatically creates parent directories if they don't exist, ensurin
 - User-friendly error messages with troubleshooting suggestions
 
 ### 4. **Improved Output Summary**
-After successful cleaning, the script displays:
+After successful cleaning and generate, the script displays:
 - ✅ Absolute file path (full path to saved file)
 - 📁 Save location name (Project Folder, Desktop, Downloads, or Custom)
 - 📊 Final dataset dimensions (rows × columns)
