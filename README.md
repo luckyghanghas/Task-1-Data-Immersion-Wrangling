@@ -48,7 +48,7 @@ These are all actions performed by the cleaning script:
 6. Manages invalid quantities, discounts, and price outliers.
 7. Fill in missing numbers and data in logical ways.
 8. Generates analysis-ready fields such as revenue and month.
-9. **Interactive save location selection** - Choose where to save cleaned data:
+9. **Interactive save location selection** - Choose where to save cleaned and generate data:
    - 📁 Project Folder (default)
    - 🖥️ Desktop
    - ⬇️ Downloads
@@ -67,7 +67,7 @@ python scripts/clean_sales_data.py  # Follow the interactive menu to select save
 
 - Data dictionary: `reports/data_dictionary.md`
 - Cleaning script: `scripts/clean_sales_data.py` (with interactive save location)
-- Sample data generator: `scripts/generate_sample_data.py`
+- Sample data generator: `scripts/generate_sample_data.py` (saved to user-selected location)
 - Raw dataset: `data/sales_transactions_raw.csv`
 - Cleaned dataset: `cleaned_analytics_dataset.csv` (saved to user-selected location)
 - Data quality report: `reports/data_quality_report.md`
@@ -75,8 +75,7 @@ python scripts/clean_sales_data.py  # Follow the interactive menu to select save
 ## Key Features
 
 ### 🎯 Interactive Save Location
-When you run `clean_sales_data.py`, you'll be prompted to choose where to save the cleaned dataset:
-
+When you run `clean_sales_data.py`,'generate_sample_data.py', you'll be prompted to choose where to save the cleaned dataset:
 ```
 ════════════════════════════════════════════════════════════
 📁 WHERE WOULD YOU LIKE TO SAVE THE CLEANED FILE?
