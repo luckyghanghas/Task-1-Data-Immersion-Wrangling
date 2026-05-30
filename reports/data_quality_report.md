@@ -1,13 +1,13 @@
 # Task 1 - Data Immersion & Wrangling
 
 ## Objective
-Produce a sales transaction data set for analysis by cleaning up the raw data, identifying quality issues, and fixing them, creating a dataset for analysis.
+Clean the raw data, detect the quality problems, correct them, and produce a set of data for sales transaction analysis.
 
 ## Dataset Overview
 - Raw rows received: 1,260
 - Final cleaned rows: 1,250
 - Date range after cleaning: 2025-01-01 to 2026-03-26
-- Business grain: one row per order
+A business grain is represented by each line of grain.
 
 ## Data Quality Issues Found
 | Issue | What I found | Treatment |
@@ -34,17 +34,17 @@ The cleaning script now includes an interactive menu allowing users to save the 
 - 🔧 **Custom Path** 
 
 ### 2. **Automated Directory Creation**
-The script automatically creates parent directories if they don't exist, ensuring seamless file saving.
+Enables the automatic creation and storage of "parent" directories if they don't already exist.
 
 ### 3. **Enhanced Error Handling**
-- Try-except blocks to catch and report file I/O errors
-- User-friendly error messages with troubleshooting suggestions
+-Handling and reporting file I/O exception: try-except blocks. Use of try-except to catch and report file I/O exceptions.
+-Clear and informative error messages and how-to's are included.
 
 ### 4. **Improved Output Summary**
 After successful cleaning and generate, the script displays:
-- ✅ Absolute file path (full path to saved file)
-- 📁 Save location name (Project Folder, Desktop, Downloads, or Custom)
-- 📊 Final dataset dimensions (rows × columns)
+- ✅ An absolute file path (i.e., the full path to saved file) The absolute file path (full path to saved file)
+- 📁 Save Location Name: Save the location name to the Project Folder, Desktop, Download folder or in a custom folder.
+- 📊 The number of rows n of the final data and the number of columns p of final data. The data set size (n × p) is the last row and last column.
 
 ## Final Output
 The cleaned file can be saved to a user-selected location:
@@ -54,7 +54,7 @@ The cleaned file can be saved to a user-selected location:
 ## How to Run
 
 ```bash
-# 1. Generate sample data with quality issues
+# 1. Generate sample data with quality issues (interactive save location prompt will appear)
 python scripts/generate_sample_data.py
 
 # 2. Clean the data (interactive save location prompt will appear)
