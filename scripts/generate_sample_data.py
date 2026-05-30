@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 import random
+import os
 
 np.random.seed(42)
 random.seed(42)
@@ -107,6 +108,10 @@ def main():
     df = generate_sample_data(n_records=5000)
     
     output_path = 'data/sales_transactions_raw.csv'
+    
+    # Create the data directory if it doesn't exist
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
     df.to_csv(output_path, index=False)
     
     print(f"✅ Sample data generated successfully!")
