@@ -1,10 +1,12 @@
 # Task 1: Data Immersion & Wrangling
 
-This data repository is part of a full data immersion and data wrangling process developed while taking part in Task 1 of the 60-Day Data Analytics Internship Program. We are using Python and Pandas for transforming the raw retail sales transactions data to a clean, structured, and analysis-ready dataset for the project.
+This data repository is part of a full data immersion and data wrangling process developed while taking part in Task 1 of the 60-Day Data Analytics Internship 
+Program. For the project, we are using Python and Pandas to manipulate the raw sales transactions data and to update it into a structured, cleaned and analysed 
+data for analysis.
 
 ## Objective
 
-Create a raw sales transactions dataset which can be analyzed with confidence by finding and fixing data quality problems using Python/Pandas and generating an analysis-ready dataset.
+Build a raw dataset of sales transactions that can be analyzed with confidence by reporting and rectifying data quality issues with Python and Pandas and transform the data into an analytics-ready dataset.
 
 ## Repository Structure
 
@@ -23,7 +25,7 @@ requirements.txt
 
 ## Dataset
 
-The data includes retail sales transactions for products, geographies, channels of distribution, customer groups, product campaigns, payment methods, delivery timings, ratings, and returns. It contains realistic DQ problems like duplicate orders, dated format mix-ups, text case inconsistencies, missing values, revenue outliers, and so on.
+Retail sales transaction data covers products sold, geographies served, distribution channels, customer groups, product campaigns sold, payment methods, delivery time, and ratings as well as returns. Includes realistic problem of DQ (Data Quality), such as duplicate orders, wrong dated format, text case, missing value, revenue outlier, etc.
 
 ## Data Quality Issues Handled
 
@@ -38,22 +40,22 @@ The data includes retail sales transactions for products, geographies, channels 
 
 ## Cleaning Summary
 
-These are all actions performed by the cleaning script:
+All those are operations carried out by the cleaning script:
 
-1. Loads the original transaction data.
+Loads the original data set from transactions.
 2. Finds the profile's missing values & duplicates.
-3. Removes duplicates by `transaction_id`.
-4. Cleans up column names and text categories.
-5. Converts mixed date formats to date values.
-6. Manages invalid quantities, discounts, and price outliers.
-7. Fill in missing numbers and data in logical ways.
-8. Generates analysis-ready fields such as revenue and month.
-9. **Interactive save location selection** - Choose where to save cleaned and generate data:
+3. Dedupes based on 'transaction_id'.
+5. Makes corrections to cleaned-up data.
+6. Performs string to date conversions.
+6. Deals with quantities and discounts that are not valid and with price outliers.
+7. Complete the number and information to make sense out of it.
+8. Creates analysis-ready fields (revenue, month, etc.).
+9. Interactive Save Route Selection - Save destination of cleaned and generated data:
    - 📁 Project Folder (default)
    - 🖥️ Desktop
    - ⬇️ Downloads
    - 🔧 Custom Path
-10. Cleanses the dataset and exports it to selected location for working with it in other applications for EDA or dashboarding.
+10. Washes up the data set and writes it to the selected location to be used in other applications for EDA or dashboarding.
 
 ## How to Run
 
@@ -100,5 +102,5 @@ After cleaning and generate, get a comprehensive summary showing:
 - 📊 Final dataset dimensions
 
 ## Key Learning
-This task will provide hands-on experience in applying data wrangling techniques: understanding basic principles behind data profiling; recording the structure 
-of a dataset; implementing repeatable data cleaning; and preparing the dataset for subsequent EDA and business intelligence tasks.
+This task will give practical experience in implementing data wrangling techniques: learning basic principles of data profiling; capturing the structure and quality of the data profile; and implementing the data profile by applying data wrangling techniques. 
+Defining what constitutes a good amount and the application of repeatable data cleansing; and the preparation of the data for the next step in EDA and business intelligence.
