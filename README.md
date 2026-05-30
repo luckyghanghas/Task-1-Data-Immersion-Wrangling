@@ -59,7 +59,7 @@ These are all actions performed by the cleaning script:
 
 ```bash
 pip install -r requirements.txt
-python scripts/generate_sample_data.py
+python scripts/generate_sample_data.py  # Follow the interactive menu to select save location
 python scripts/clean_sales_data.py  # Follow the interactive menu to select save location
 ```
 
@@ -75,7 +75,7 @@ python scripts/clean_sales_data.py  # Follow the interactive menu to select save
 ## Key Features
 
 ### 🎯 Interactive Save Location
-When you run `clean_sales_data.py`,'generate_sample_data.py', you'll be prompted to choose where to save the cleaned dataset:
+When you run `clean_sales_data.py`,`generate_sample_data.py`, you'll be prompted to choose where to save the cleaned and generate dataset:
 ```
 ════════════════════════════════════════════════════════════
 📁 WHERE WOULD YOU LIKE TO SAVE THE CLEANED FILE?
@@ -94,10 +94,11 @@ Directories are automatically created if they don't exist, making it seamless to
 The script includes robust error handling with user-friendly messages for any file I/O issues.
 
 ### 📊 Detailed Summary Output
-After cleaning, get a comprehensive summary showing:
+After cleaning and generate, get a comprehensive summary showing:
 - ✅ Full absolute path to saved file
 - 📁 Save location used
 - 📊 Final dataset dimensions
 
 ## Key Learning
-This task will provide hands-on experience in applying data wrangling techniques: understanding basic principles behind data profiling; recording the structure of a dataset; implementing repeatable data cleaning; and preparing the dataset for subsequent EDA and business intelligence tasks.
+This task will provide hands-on experience in applying data wrangling techniques: understanding basic principles behind data profiling; recording the structure 
+of a dataset; implementing repeatable data cleaning; and preparing the dataset for subsequent EDA and business intelligence tasks.
