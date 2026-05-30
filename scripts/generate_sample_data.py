@@ -2,6 +2,11 @@
 generate_sample_data.py
 Generates a sample sales transactions dataset with realistic data quality issues.
 This raw dataset is used as input for the data cleaning pipeline.
+
+Features:
+- Generate synthetic data with quality issues
+- Save to project folder, Desktop, Downloads, or custom path
+- Interactive menu for choosing save location
 """
 
 import pandas as pd
@@ -9,6 +14,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import random
 import os
+from pathlib import Path
 
 np.random.seed(42)
 random.seed(42)
@@ -102,21 +108,76 @@ def generate_sample_data(n_records=5000):
     
     return df
 
+def get_user_home():
+    """Get the user's home directory."""
+    return str(Path.home())
+
+def get_save_location():
+    """Interactive menu to select save location."""
+    print("\n" + "="*60)
+    print("📁 WHERE WOULD YOU LIKE TO SAVE THE FILE?")
+    print("="*60)
+    print("1️⃣  Project Folder (data/)")
+    print("2️⃣  Desktop")
+    print("3️⃣  Downloads")
+    print("4️⃣  Custom Path")
+    print("="*60)
+    
+    choice = input("Enter your choice (1-4): ").strip()
+    
+    home = get_user_home()
+    
+    if choice == '1':
+        output_path = 'data/sales_transactions_raw.csv'
+        location_name = "Project Folder"
+    elif choice == '2':
+        desktop_path = os.path.join(home, 'Desktop')
+        output_path = os.path.join(desktop_path, 'sales_transactions_raw.csv')
+        location_name = "Desktop"
+    elif choice == '3':
+        downloads_path = os.path.join(home, 'Downloads')
+        output_path = os.path.join(downloads_path, 'sales_transactions_raw.csv')
+        location_name = "Downloads"
+    elif choice == '4':
+        custom_path = input("Enter full path (or just filename for current directory): ").strip()
+        if not custom_path.endswith('.csv'):
+            custom_path += '.csv'
+        output_path = custom_path
+        location_name = "Custom Path"
+    else:
+        print("❌ Invalid choice! Defaulting to Project Folder...")
+        output_path = 'data/sales_transactions_raw.csv'
+        location_name = "Project Folder (Default)"
+    
+    return output_path, location_name
+
 def main():
-    """Generate and save sample data to CSV."""
-    print("🔄 Generating sample sales transactions data...")
+    """Generate and save sample data to selected location."""
+    print("\n🔄 Generating sample sales transactions data...")
     df = generate_sample_data(n_records=5000)
     
-    output_path = 'data/sales_transactions_raw.csv'
+    # Get save location from user
+    output_path, location_name = get_save_location()
     
-    # Create the data directory if it doesn't exist
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # Create directory if it doesn't exist
+    output_dir = os.path.dirname(output_path)
+    if output_dir:  # Only create if there's a directory component
+        os.makedirs(output_dir, exist_ok=True)
     
-    df.to_csv(output_path, index=False)
-    
-    print(f"✅ Sample data generated successfully!")
-    print(f"📊 Dataset shape: {df.shape[0]} rows × {df.shape[1]} columns")
-    print(f"💾 Saved to: {output_path}")
+    # Save the file
+    try:
+        df.to_csv(output_path, index=False)
+        
+        print("\n" + "="*60)
+        print("✅ SUCCESS! Sample data generated and saved!")
+        print("="*60)
+        print(f"📊 Dataset shape: {df.shape[0]} rows × {df.shape[1]} columns")
+        print(f"📁 Location: {location_name}")
+        print(f"💾 Full path: {os.path.abspath(output_path)}")
+        print("="*60 + "\n")
+    except Exception as e:
+        print(f"\n❌ Error saving file: {e}")
+        print("Please check the path and try again.")
 
 if __name__ == '__main__':
     main()
